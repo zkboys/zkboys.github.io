@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>css选择器 | ZKBOYS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="闲来无事，复习一下。    选择器 例子 描述 CSS版本     .class .active 类选择器 1   #id #wrap id选择器 1   * * 通配符，选择所有元素 2   element p 标签选择器 1   element,element div,p 逗号选择符，一次性选择多个元素 1   element element div p 空格选择符，选取所有后代元素 1">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css选择器">
+<meta property="og:url" content="http://zkboys.com/2016/03/11/css选择器/index.html">
+<meta property="og:site_name" content="ZKBOYS">
+<meta property="og:description" content="闲来无事，复习一下。    选择器 例子 描述 CSS版本     .class .active 类选择器 1   #id #wrap id选择器 1   * * 通配符，选择所有元素 2   element p 标签选择器 1   element,element div,p 逗号选择符，一次性选择多个元素 1   element element div p 空格选择符，选取所有后代元素 1">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-01-06T03:44:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css选择器">
+<meta name="twitter:description" content="闲来无事，复习一下。    选择器 例子 描述 CSS版本     .class .active 类选择器 1   #id #wrap id选择器 1   * * 通配符，选择所有元素 2   element p 标签选择器 1   element,element div,p 逗号选择符，一次性选择多个元素 1   element element div p 空格选择符，选取所有后代元素 1">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/fonts-googleapis/fonts-googleapis.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header" style="overflow: hidden">
+    <div id="banner">
+        <iframe id="canvas-animation" src="/canvas-animation/1.html" frameborder="0" style="width: 100%; height: 100%"></iframe>
+    </div>
+    <div id="header-outer">
+        <div class="outer">
+            <div id="header-title" class="inner">
+                <a href="/">
+                  <div class="header-img"></div>
+                </a>
+                <h1 id="logo-wrap">
+                    <a href="/" id="logo">ZKBOYS</a>
+                </h1>
+                
+                <h2 id="subtitle-wrap">
+                    <a href="/" id="subtitle">I&#39;m a 博客</a>
+                </h2>
+                
+            </div>
+            <div id="header-inner" class="inner">
+                <nav id="main-nav">
+                    <a id="main-nav-toggle" class="nav-icon"></a>
+                    
+                    <a class="main-nav-link" href="/">Home</a>
+                    
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                    
+                </nav>
+                <nav id="sub-nav">
+                    
+                    <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+                </nav>
+                <div id="search-form-wrap">
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zkboys.com"></form>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="liquid">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -10"></feColorMatrix>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-css选择器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/11/css选择器/" class="article-date">
+  <time datetime="2016-03-11T02:01:16.000Z" itemprop="datePublished">2016-03-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>►<a class="article-category-link" href="/categories/前端/CSS/">CSS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      css选择器
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>闲来无事，复习一下。</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>例子</th>
+<th>描述</th>
+<th>CSS版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.class</td>
+<td>.active</td>
+<td>类选择器</td>
+<td>1</td>
+</tr>
+<tr>
+<td>#id</td>
+<td>#wrap</td>
+<td>id选择器</td>
+<td>1</td>
+</tr>
+<tr>
+<td>*</td>
+<td>*</td>
+<td>通配符，选择所有元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>element</td>
+<td>p</td>
+<td>标签选择器</td>
+<td>1</td>
+</tr>
+<tr>
+<td>element,element</td>
+<td>div,p</td>
+<td>逗号选择符，一次性选择多个元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>element element</td>
+<td>div p</td>
+<td>空格选择符，选取所有后代元素</td>
+<td>1</td>
+</tr>
+<tr>
+<td>element&gt;element</td>
+<td>div&gt;p</td>
+<td>大于号选择符，选取直接子节点</td>
+<td>2</td>
+</tr>
+<tr>
+<td>element+element</td>
+<td>div+p</td>
+<td>加号选择符，紧接着之后的第一个兄弟元素（中间不能有其他元素），直接下一个。</td>
+<td>2</td>
+</tr>
+<tr>
+<td>element~element</td>
+<td>div~p</td>
+<td>所有之后的兄弟元素，非兄弟元素不会选中</td>
+<td>3</td>
+</tr>
+<tr>
+<td>[attr]</td>
+<td>div[title]</td>
+<td>含有title属性的div元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attr=value]</td>
+<td>div[title=good]</td>
+<td>选择title属性为good的div元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attr~=value]</td>
+<td>div[title~=good]</td>
+<td>title属相包含good <strong>单词</strong> 的div元素，比如title=’good boy!’可以，但是title=’goodboy’不可以</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attr竖线=value]</td>
+<td>div[title竖线=go]</td>
+<td>title属性以go开头的所有div元素，还不算是以某个xx开头，这个选择符只有以下几种情况可以：title=’go’ title=’go-‘ title=’go-od’ title=’go-od boy!’,<strong>需要连字符</strong>,这个选择器是不是为lang属性发明的？</td>
+<td>2</td>
+</tr>
+<tr>
+<td>[attr^=value]</td>
+<td>a[src^=”https”]</td>
+<td>开头：选择其 src 属性值以 “https” 开头的所有a元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>[attr$=value]</td>
+<td>a[src$=”.pdf”]</td>
+<td>结尾：选择其 src 属性以 “.pdf” 结尾的所有a元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>[attr*=value]</td>
+<td>a[src*=”abc”]</td>
+<td>包含：选择其 src 属性中包含 “abc” 子串的所有a元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:link</td>
+<td>a:link</td>
+<td>选择所有未被访问的链接</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:visited</td>
+<td>a:visited</td>
+<td>选择所有已被访问的链接</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:active</td>
+<td>a:active</td>
+<td>选择活动链接</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:hover</td>
+<td>a:hover</td>
+<td>选择鼠标指针位于其上的链接</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:focus</td>
+<td>input:focus</td>
+<td>选择获得焦点的 input 元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:first-letter</td>
+<td>p:first-letter</td>
+<td>选择每个 p 元素的首字母</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:first-line</td>
+<td>p:first-line</td>
+<td>选择每个 p 元素的首行</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:first-child</td>
+<td>p:first-child</td>
+<td>选择属于父元素的第一个子元素的每个 p 元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:before</td>
+<td>p:before</td>
+<td>在每个 p 元素的内容之前插入内容</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:after</td>
+<td>p:after</td>
+<td>在每个 p 元素的内容之后插入内容</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:lang(language)</td>
+<td>p:lang(it)</td>
+<td>选择带有以 “it” 开头的 lang 属性值的每个p元素</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:first-of-type</td>
+<td>p:first-of-type</td>
+<td>选择属于其父元素的首个 p 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:last-of-type</td>
+<td>p:last-of-type</td>
+<td>选择属于其父元素的最后 p 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:only-of-type</td>
+<td>p:only-of-type</td>
+<td>选择属于其父元素唯一的 p 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:only-child</td>
+<td>p:only-child</td>
+<td>选择属于其父元素的唯一子元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-child(n)</td>
+<td>p:nth-child(2)</td>
+<td>选择属于其父元素的第二个子元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-last-child(n)</td>
+<td>p:nth-last-child(2)</td>
+<td>同上，从最后一个子元素开始计数</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-of-type(n)</td>
+<td>p:nth-of-type(2)</td>
+<td>选择属于其父元素第二个 p 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-last-of-type(n)</td>
+<td>p:nth-last-of-type(2)</td>
+<td>同上，但是从最后一个子元素开始计数。</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:last-child</td>
+<td>p:last-child</td>
+<td>选择属于其父元素最后一个子元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:root</td>
+<td>:root</td>
+<td>选择文档的根元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:empty</td>
+<td>p:empty</td>
+<td>选择没有子元素的 p 元素（包括文本节点）</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:target</td>
+<td>#news:target</td>
+<td>选择当前活动的 #news 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:enabled</td>
+<td>input:enabled</td>
+<td>选择每个启用的 input 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>input:disabled</td>
+<td>选择每个禁用的 input 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:checked</td>
+<td>input:checked</td>
+<td>选择每个被选中的 input 元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:not(selector)</td>
+<td>:not(p)</td>
+<td>选择非 p 元素的每个元素</td>
+<td>3</td>
+</tr>
+<tr>
+<td>::selection</td>
+<td>::selection</td>
+<td>选择被用户选取的元素部分</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zkboys.com/2016/03/11/css选择器/" data-id="cje5b2eo5002axv9fpj995773" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/11/emmet语法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          emmet语法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/10/github提交代码时，即使添加了sshkey仍然需要输入密码的原因/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">github提交代码时，即使添加了ssh-key仍然需要输入密码的原因</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+	
+	<section id="comment">
+		<!-- 多说评论框 start -->
+		<div class="ds-thread" data-thread-key="2016/03/11/css选择器/" data-title="css选择器" data-url="http://zkboys.com/2016/03/11/css选择器/"></div>
+		<!-- 多说评论框 end -->
+		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		<script type="text/javascript">
+		var duoshuoQuery = {short_name:"zkboys"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0]
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		</script>
+		<!-- 多说公共JS代码 end -->
+	</section>
+	
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul class="recent-post">
+        
+          <li>
+            <a href="/2018/02/27/cross-env/">cross-env</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/28/nginx操作/">nginx操作</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/29/git-tag/">git tag</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/02/数组选出几个数相加等于固定值/">数组选出几个数相加等于固定值</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/02/bind-polyfill/">bind polyfill</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/27/通过时间戳获取索引的一个有趣的算法题/">通过时间戳获取索引的一个有趣的算法题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/17/Vue2-0-跨组件事件/">Vue2.0 跨组件事件</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS获取窗滚动条位置/">JS获取窗滚动条位置</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS获取窗口尺寸/">JS获取窗口尺寸</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS解析query-string/">JS解析query-string</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">50</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/HTML/">HTML</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JS/">JS</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/构建/">构建</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/监控/">监控</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/">后端</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/后端/nginx/">nginx</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/node/">node</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/shell/">shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/数据库/">数据库</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/实现方案/">实现方案</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转载/">转载</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redux/">Redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/color/">color</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cross-env/">cross-env</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docs/">docs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/doctype/">doctype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emmet/">emmet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/meta/">meta</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/polyfill/">polyfill</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh-key/">ssh-key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/state-machine/">state-machine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tabs/">tabs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分页/">分页</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端上报错误信息/">前端上报错误信息</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单页面/">单页面</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹框/">弹框</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/按钮/">按钮</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境搭建/">环境搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/错误/">错误</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/React/" style="font-size: 18px;">React</a> <a href="/tags/Redux/" style="font-size: 10px;">Redux</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/color/" style="font-size: 10px;">color</a> <a href="/tags/cross-env/" style="font-size: 10px;">cross-env</a> <a href="/tags/css/" style="font-size: 16px;">css</a> <a href="/tags/docs/" style="font-size: 10px;">docs</a> <a href="/tags/doctype/" style="font-size: 10px;">doctype</a> <a href="/tags/emmet/" style="font-size: 10px;">emmet</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/github/" style="font-size: 14px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 12px;">html</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/meta/" style="font-size: 12px;">meta</a> <a href="/tags/mongodb/" style="font-size: 12px;">mongodb</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 16px;">node</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/polyfill/" style="font-size: 10px;">polyfill</a> <a href="/tags/ssh-key/" style="font-size: 10px;">ssh-key</a> <a href="/tags/state-machine/" style="font-size: 10px;">state-machine</a> <a href="/tags/tabs/" style="font-size: 10px;">tabs</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/webpack/" style="font-size: 18px;">webpack</a> <a href="/tags/分页/" style="font-size: 10px;">分页</a> <a href="/tags/前端上报错误信息/" style="font-size: 10px;">前端上报错误信息</a> <a href="/tags/单页面/" style="font-size: 10px;">单页面</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/布局/" style="font-size: 12px;">布局</a> <a href="/tags/弹框/" style="font-size: 10px;">弹框</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/按钮/" style="font-size: 10px;">按钮</a> <a href="/tags/数据库/" style="font-size: 12px;">数据库</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/环境搭建/" style="font-size: 10px;">环境搭建</a> <a href="/tags/算法/" style="font-size: 12px;">算法</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a> <a href="/tags/错误/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">19</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 WangShubin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script src="/js/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script src="/js/script.js"></script>
+
+
+<script>
+    function getRandomNum(min, max) {
+        var range = max - min;
+        var rand = Math.random();
+        return (min + Math.round(rand * range));
+    }
+    $(function () {
+        var n = getRandomNum(1, 10);
+        var animationSrc = '/canvas-animation/' + n + '.html';
+        $('#canvas-animation').attr('src', animationSrc);
+    });
+</script>
+
+  </div>
+</body>
+</html>

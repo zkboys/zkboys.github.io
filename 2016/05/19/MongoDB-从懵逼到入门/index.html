@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>MongoDB-从懵逼到入门 | ZKBOYS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="安装根据官网进行安装。 ubuntu 15 安装完成之后无法使用解决办法：12sudo apt-get install upstart-sysv重启之后，就可以使用了。 启动&amp;amp;停止官网上有相关文档，一切以官网为主 终端方式1234# 启动mongod# 停止关闭当前终端即可 后台运行方式1234567# 启动 添加--fork参数 --logpath：指定日志文件 --logappend：">
+<meta name="keywords" content="mongodb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB-从懵逼到入门">
+<meta property="og:url" content="http://zkboys.com/2016/05/19/MongoDB-从懵逼到入门/index.html">
+<meta property="og:site_name" content="ZKBOYS">
+<meta property="og:description" content="安装根据官网进行安装。 ubuntu 15 安装完成之后无法使用解决办法：12sudo apt-get install upstart-sysv重启之后，就可以使用了。 启动&amp;amp;停止官网上有相关文档，一切以官网为主 终端方式1234# 启动mongod# 停止关闭当前终端即可 后台运行方式1234567# 启动 添加--fork参数 --logpath：指定日志文件 --logappend：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-01-12T07:27:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MongoDB-从懵逼到入门">
+<meta name="twitter:description" content="安装根据官网进行安装。 ubuntu 15 安装完成之后无法使用解决办法：12sudo apt-get install upstart-sysv重启之后，就可以使用了。 启动&amp;amp;停止官网上有相关文档，一切以官网为主 终端方式1234# 启动mongod# 停止关闭当前终端即可 后台运行方式1234567# 启动 添加--fork参数 --logpath：指定日志文件 --logappend：">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/fonts-googleapis/fonts-googleapis.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header" style="overflow: hidden">
+    <div id="banner">
+        <iframe id="canvas-animation" src="/canvas-animation/1.html" frameborder="0" style="width: 100%; height: 100%"></iframe>
+    </div>
+    <div id="header-outer">
+        <div class="outer">
+            <div id="header-title" class="inner">
+                <a href="/">
+                  <div class="header-img"></div>
+                </a>
+                <h1 id="logo-wrap">
+                    <a href="/" id="logo">ZKBOYS</a>
+                </h1>
+                
+                <h2 id="subtitle-wrap">
+                    <a href="/" id="subtitle">I&#39;m a 博客</a>
+                </h2>
+                
+            </div>
+            <div id="header-inner" class="inner">
+                <nav id="main-nav">
+                    <a id="main-nav-toggle" class="nav-icon"></a>
+                    
+                    <a class="main-nav-link" href="/">Home</a>
+                    
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                    
+                </nav>
+                <nav id="sub-nav">
+                    
+                    <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+                </nav>
+                <div id="search-form-wrap">
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zkboys.com"></form>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="liquid">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -10"></feColorMatrix>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-MongoDB-从懵逼到入门" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/19/MongoDB-从懵逼到入门/" class="article-date">
+  <time datetime="2016-05-19T13:50:53.000Z" itemprop="datePublished">2016-05-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/后端/">后端</a>►<a class="article-category-link" href="/categories/后端/数据库/">数据库</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MongoDB-从懵逼到入门
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <div id="toc" class="toc-article">
+            <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启动-amp-停止"><span class="toc-number">2.</span> <span class="toc-text">启动&amp;停止</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#终端方式"><span class="toc-number">2.1.</span> <span class="toc-text">终端方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后台运行方式"><span class="toc-number">2.2.</span> <span class="toc-text">后台运行方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#卸载"><span class="toc-number">3.</span> <span class="toc-text">卸载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用shell命令"><span class="toc-number">4.</span> <span class="toc-text">常用shell命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导入导出"><span class="toc-number">5.</span> <span class="toc-text">导入导出</span></a></li></ol>
+          </div>
+        
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>根据<a href="https://docs.mongodb.com/manual/installation/" target="_blank" rel="noopener">官网</a>进行安装。</p>
+<p><a href="http://askubuntu.com/questions/617097/mongodb-2-6-does-not-start-on-ubuntu-15-04" target="_blank" rel="noopener">ubuntu 15 安装完成之后无法使用解决办法</a>：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install upstart-sysv</span><br><span class="line">重启之后，就可以使用了。</span><br></pre></td></tr></table></figure></p>
+<h2 id="启动-amp-停止"><a href="#启动-amp-停止" class="headerlink" title="启动&amp;停止"></a>启动&amp;停止</h2><p>官网上有相关文档，一切以官网为主</p>
+<h3 id="终端方式"><a href="#终端方式" class="headerlink" title="终端方式"></a>终端方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 启动</span><br><span class="line">mongod</span><br><span class="line"># 停止</span><br><span class="line">关闭当前终端即可</span><br></pre></td></tr></table></figure>
+<h3 id="后台运行方式"><a href="#后台运行方式" class="headerlink" title="后台运行方式"></a>后台运行方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 启动 添加--fork参数 --logpath：指定日志文件 --logappend：日志以追加方式记录</span><br><span class="line">mongod --fork --logpath /var/log/mongodb.log --logappend</span><br><span class="line"></span><br><span class="line"># 停止 通过admin数据库命令停止</span><br><span class="line">mongo</span><br><span class="line">use admin</span><br><span class="line">db.shutdownServer()</span><br></pre></td></tr></table></figure>
+<h2 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h2><p><a href="http://askubuntu.com/questions/147135/how-can-i-uninstall-mongodb-and-reinstall-the-latest-version" target="_blank" rel="noopener">http://askubuntu.com/questions/147135/how-can-i-uninstall-mongodb-and-reinstall-the-latest-version</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get purge mongodb mongodb-clients mongodb-server mongodb-dev</span><br><span class="line">sudo apt-get purge mongodb-10gen</span><br><span class="line">sudo apt-get autoremove</span><br></pre></td></tr></table></figure></p>
+<h2 id="常用shell命令"><a href="#常用shell命令" class="headerlink" title="常用shell命令"></a>常用shell命令</h2><ul>
+<li>查看当前数据库：<code>db</code></li>
+<li>查看有那些数据库：<code>show dbs</code></li>
+<li>切换数据库：<code>use db_name</code></li>
+<li>查看集合：<code>show collections</code></li>
+<li>查询：<code>db.collection_name.find()</code></li>
+<li>插入：<code>db.collection_name.insert(obj)</code></li>
+<li>更新：<code>db.collection_name.update(condition,newObj)</code></li>
+</ul>
+<h2 id="导入导出"><a href="#导入导出" class="headerlink" title="导入导出"></a>导入导出</h2><p><a href="http://www.jb51.net/article/52498.htm" target="_blank" rel="noopener">更多参考这里</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">导出数据库：</span><br><span class="line">mongodump -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 -o 保存导出文件路径</span><br><span class="line"></span><br><span class="line">如果没有用户密码，可以去掉-u和-p。</span><br><span class="line">如果导出本机的数据库，可以去掉-h。</span><br><span class="line">如果是默认端口，可以去掉--port。</span><br><span class="line">如果想导出所有数据库，可以去掉-d。</span><br><span class="line"></span><br><span class="line">导入数据库：</span><br><span class="line">mongorestore -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 --drop 文件存在路径</span><br><span class="line"></span><br><span class="line">--drop的意思是，先删除所有的记录，然后恢复</span><br><span class="line"></span><br><span class="line">导出表：</span><br><span class="line">mongoexport -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 -c 表名 -f 字段 -q 条件导出 --csv -o 文件名</span><br><span class="line"></span><br><span class="line">-f 导出指字段，以字号分割，-f name,email,age导出name,email,age这三个字段</span><br><span class="line">-q 可以根查询条件导出，-q &apos;&#123; &quot;uid&quot; : &quot;100&quot; &#125;&apos; 导出uid为100的数据</span><br><span class="line">--csv 表示导出的文件格式为csv的，这个比较有用，因为大部分的关系型数据库都是支持csv，在这里有共同点</span><br><span class="line"></span><br><span class="line">导入表：</span><br><span class="line">1.1,还原整表导出的非csv文件</span><br><span class="line">mongoimport -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 -c 表名 --upsert --drop 文件名  </span><br><span class="line">重点说一下--upsert，其他参数上面的命令已有提到，--upsert 插入或者更新现有数据</span><br><span class="line"></span><br><span class="line">1.2,还原部分字段的导出文件</span><br><span class="line">mongoimport -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 -c 表名 --upsertFields 字段 --drop 文件名  </span><br><span class="line">--upsertFields根--upsert一样</span><br><span class="line"></span><br><span class="line">1.3,还原导出的csv文件</span><br><span class="line">mongoimport -h IP --port 端口 -u 用户名 -p 密码 -d 数据库 -c 表名 --type 类型 --headerline --upsert --drop 文件名  </span><br><span class="line">上面三种情况，还可以有其他排列组合的。</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zkboys.com/2016/05/19/MongoDB-从懵逼到入门/" data-id="cje5b2enk000zxv9fbdxgew35" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongodb/">mongodb</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/22/node-项目中的模块/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          node 项目中的模块
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/17/使用序列生成id/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">使用序列生成id</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+	
+	<section id="comment">
+		<!-- 多说评论框 start -->
+		<div class="ds-thread" data-thread-key="2016/05/19/MongoDB-从懵逼到入门/" data-title="MongoDB-从懵逼到入门" data-url="http://zkboys.com/2016/05/19/MongoDB-从懵逼到入门/"></div>
+		<!-- 多说评论框 end -->
+		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		<script type="text/javascript">
+		var duoshuoQuery = {short_name:"zkboys"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0]
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		</script>
+		<!-- 多说公共JS代码 end -->
+	</section>
+	
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul class="recent-post">
+        
+          <li>
+            <a href="/2018/02/27/cross-env/">cross-env</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/28/nginx操作/">nginx操作</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/29/git-tag/">git tag</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/02/数组选出几个数相加等于固定值/">数组选出几个数相加等于固定值</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/02/bind-polyfill/">bind polyfill</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/27/通过时间戳获取索引的一个有趣的算法题/">通过时间戳获取索引的一个有趣的算法题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/17/Vue2-0-跨组件事件/">Vue2.0 跨组件事件</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS获取窗滚动条位置/">JS获取窗滚动条位置</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS获取窗口尺寸/">JS获取窗口尺寸</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS解析query-string/">JS解析query-string</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">50</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/HTML/">HTML</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JS/">JS</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/构建/">构建</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/监控/">监控</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/">后端</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/后端/nginx/">nginx</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/node/">node</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/shell/">shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/数据库/">数据库</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/实现方案/">实现方案</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转载/">转载</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redux/">Redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/color/">color</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cross-env/">cross-env</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docs/">docs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/doctype/">doctype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emmet/">emmet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/meta/">meta</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/polyfill/">polyfill</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh-key/">ssh-key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/state-machine/">state-machine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tabs/">tabs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分页/">分页</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端上报错误信息/">前端上报错误信息</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单页面/">单页面</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹框/">弹框</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/按钮/">按钮</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境搭建/">环境搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/错误/">错误</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/React/" style="font-size: 18px;">React</a> <a href="/tags/Redux/" style="font-size: 10px;">Redux</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/color/" style="font-size: 10px;">color</a> <a href="/tags/cross-env/" style="font-size: 10px;">cross-env</a> <a href="/tags/css/" style="font-size: 16px;">css</a> <a href="/tags/docs/" style="font-size: 10px;">docs</a> <a href="/tags/doctype/" style="font-size: 10px;">doctype</a> <a href="/tags/emmet/" style="font-size: 10px;">emmet</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/github/" style="font-size: 14px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 12px;">html</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/meta/" style="font-size: 12px;">meta</a> <a href="/tags/mongodb/" style="font-size: 12px;">mongodb</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 16px;">node</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/polyfill/" style="font-size: 10px;">polyfill</a> <a href="/tags/ssh-key/" style="font-size: 10px;">ssh-key</a> <a href="/tags/state-machine/" style="font-size: 10px;">state-machine</a> <a href="/tags/tabs/" style="font-size: 10px;">tabs</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/webpack/" style="font-size: 18px;">webpack</a> <a href="/tags/分页/" style="font-size: 10px;">分页</a> <a href="/tags/前端上报错误信息/" style="font-size: 10px;">前端上报错误信息</a> <a href="/tags/单页面/" style="font-size: 10px;">单页面</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/布局/" style="font-size: 12px;">布局</a> <a href="/tags/弹框/" style="font-size: 10px;">弹框</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/按钮/" style="font-size: 10px;">按钮</a> <a href="/tags/数据库/" style="font-size: 12px;">数据库</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/环境搭建/" style="font-size: 10px;">环境搭建</a> <a href="/tags/算法/" style="font-size: 12px;">算法</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a> <a href="/tags/错误/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">19</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 WangShubin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script src="/js/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script src="/js/script.js"></script>
+
+
+<script>
+    function getRandomNum(min, max) {
+        var range = max - min;
+        var rand = Math.random();
+        return (min + Math.round(rand * range));
+    }
+    $(function () {
+        var n = getRandomNum(1, 10);
+        var animationSrc = '/canvas-animation/' + n + '.html';
+        $('#canvas-animation').attr('src', animationSrc);
+    });
+</script>
+
+  </div>
+</body>
+</html>

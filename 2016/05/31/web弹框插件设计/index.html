@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>web弹框插件设计 | ZKBOYS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="弹框一般项目都会用到，项目中的所有弹框要做到统一，需要对弹框组件做单独的整理维护 一般弹框分为：alert、confirm、promp、toast这么几种 设计一个通用的modal，其他（任何弹框、滑出形式组件）的组件基于modal实现，统一底层的实现，便于后期统一维护和修改，统一控制，这一点很重要。其实是使用了外观模式。根据参数个数判断参数的作用，实现类似重载功能，下面是简单的实现原理：具体参考">
+<meta name="keywords" content="弹框">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web弹框插件设计">
+<meta property="og:url" content="http://zkboys.com/2016/05/31/web弹框插件设计/index.html">
+<meta property="og:site_name" content="ZKBOYS">
+<meta property="og:description" content="弹框一般项目都会用到，项目中的所有弹框要做到统一，需要对弹框组件做单独的整理维护 一般弹框分为：alert、confirm、promp、toast这么几种 设计一个通用的modal，其他（任何弹框、滑出形式组件）的组件基于modal实现，统一底层的实现，便于后期统一维护和修改，统一控制，这一点很重要。其实是使用了外观模式。根据参数个数判断参数的作用，实现类似重载功能，下面是简单的实现原理：具体参考">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-01-06T03:44:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="web弹框插件设计">
+<meta name="twitter:description" content="弹框一般项目都会用到，项目中的所有弹框要做到统一，需要对弹框组件做单独的整理维护 一般弹框分为：alert、confirm、promp、toast这么几种 设计一个通用的modal，其他（任何弹框、滑出形式组件）的组件基于modal实现，统一底层的实现，便于后期统一维护和修改，统一控制，这一点很重要。其实是使用了外观模式。根据参数个数判断参数的作用，实现类似重载功能，下面是简单的实现原理：具体参考">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/fonts-googleapis/fonts-googleapis.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header" style="overflow: hidden">
+    <div id="banner">
+        <iframe id="canvas-animation" src="/canvas-animation/1.html" frameborder="0" style="width: 100%; height: 100%"></iframe>
+    </div>
+    <div id="header-outer">
+        <div class="outer">
+            <div id="header-title" class="inner">
+                <a href="/">
+                  <div class="header-img"></div>
+                </a>
+                <h1 id="logo-wrap">
+                    <a href="/" id="logo">ZKBOYS</a>
+                </h1>
+                
+                <h2 id="subtitle-wrap">
+                    <a href="/" id="subtitle">I&#39;m a 博客</a>
+                </h2>
+                
+            </div>
+            <div id="header-inner" class="inner">
+                <nav id="main-nav">
+                    <a id="main-nav-toggle" class="nav-icon"></a>
+                    
+                    <a class="main-nav-link" href="/">Home</a>
+                    
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                    
+                </nav>
+                <nav id="sub-nav">
+                    
+                    <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+                </nav>
+                <div id="search-form-wrap">
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zkboys.com"></form>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="liquid">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -10"></feColorMatrix>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-web弹框插件设计" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/31/web弹框插件设计/" class="article-date">
+  <time datetime="2016-05-31T11:26:47.000Z" itemprop="datePublished">2016-05-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/实现方案/">实现方案</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      web弹框插件设计
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p><em>弹框一般项目都会用到，项目中的所有弹框要做到统一，需要对弹框组件做单独的整理维护</em></p>
+<p>一般弹框分为：alert、confirm、promp、toast这么几种</p>
+<p>设计一个通用的modal，其他（任何弹框、滑出形式组件）的组件基于modal实现，统一底层的实现，便于后期统一维护和修改，统一控制，这一点很重要。其实是使用了<strong>外观模式</strong>。根据参数个数判断参数的作用，实现类似重载功能，下面是简单的实现原理：<br><em>具体参考framework7源码modals.js</em><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">app.modal = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br><span class="line">alert = <span class="function"><span class="keyword">function</span> (<span class="params">text, title, callbackOk</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> title === <span class="string">'function'</span>) &#123;</span><br><span class="line">        callbackOk = <span class="built_in">arguments</span>[<span class="number">1</span>];</span><br><span class="line">        title = <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> app.modal(options);</span><br><span class="line">&#125;;</span><br><span class="line">confirm = <span class="function"><span class="keyword">function</span> (<span class="params">text, title, callbackOk, callbackCancel</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> title === <span class="string">'function'</span>) &#123;</span><br><span class="line">        callbackCancel = <span class="built_in">arguments</span>[<span class="number">2</span>];</span><br><span class="line">        callbackOk = <span class="built_in">arguments</span>[<span class="number">1</span>];</span><br><span class="line">        title = <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> app.modal(options);</span><br><span class="line">&#125;;</span><br><span class="line">prompt = <span class="function"><span class="keyword">function</span> (<span class="params">text, title, callbackOk, callbackCancel,callbackOpened</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> title === <span class="string">'function'</span>) &#123;</span><br><span class="line">        callbackCancel = <span class="built_in">arguments</span>[<span class="number">2</span>];</span><br><span class="line">        callbackOk = <span class="built_in">arguments</span>[<span class="number">1</span>];</span><br><span class="line">        callbackOpened = <span class="built_in">arguments</span>[<span class="number">3</span>];</span><br><span class="line">        title = <span class="literal">undefined</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>  app.modal(options);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>如下是基于F7改造的一个jQuery插件（样式使用的还是F7的样式）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*========================================================</span></span><br><span class="line"><span class="comment"> * 弹出框</span></span><br><span class="line"><span class="comment"> * =======================================================*/</span></span><br><span class="line"><span class="comment">// TODO F7有些方法没实现,暂时不需要</span></span><br><span class="line">;</span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">$, window, document, undefined</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> modalStack = [];</span><br><span class="line">    <span class="keyword">var</span> _modalTemplateTempDiv = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">modal</span>(<span class="params">params</span>) </span>&#123;</span><br><span class="line">        params = params || &#123;&#125;;</span><br><span class="line">        <span class="keyword">var</span> modalHTML = <span class="string">''</span>;</span><br><span class="line">        <span class="keyword">var</span> buttonsHTML = <span class="string">''</span>;</span><br><span class="line">        <span class="keyword">if</span> (params.buttons &amp;&amp; params.buttons.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; params.buttons.length; i++) &#123;</span><br><span class="line">                buttonsHTML += <span class="string">'&lt;span class="modal-button'</span> + (params.buttons[i].bold ? <span class="string">' modal-button-bold'</span> : <span class="string">''</span>) + <span class="string">'"&gt;'</span> + params.buttons[i].text + <span class="string">'&lt;/span&gt;'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> titleHTML = params.title ? <span class="string">'&lt;div class="modal-title"&gt;'</span> + params.title + <span class="string">'&lt;/div&gt;'</span> : <span class="string">''</span>;</span><br><span class="line">        <span class="keyword">var</span> textHTML = params.text ? <span class="string">'&lt;div class="modal-text"&gt;'</span> + params.text + <span class="string">'&lt;/div&gt;'</span> : <span class="string">''</span>;</span><br><span class="line">        <span class="keyword">var</span> afterTextHTML = params.afterText ? params.afterText : <span class="string">''</span>;</span><br><span class="line">        <span class="keyword">var</span> noButtons = !params.buttons || params.buttons.length === <span class="number">0</span> ? <span class="string">'modal-no-buttons'</span> : <span class="string">''</span>;</span><br><span class="line">        <span class="keyword">var</span> verticalButtons = params.verticalButtons ? <span class="string">'modal-buttons-vertical'</span> : <span class="string">''</span>;</span><br><span class="line">        modalHTML = <span class="string">'&lt;div class="modal '</span> + noButtons + <span class="string">' '</span> + (params.cssClass || <span class="string">''</span>) + <span class="string">'"&gt;&lt;div class="modal-inner"&gt;'</span> + (titleHTML + textHTML + afterTextHTML) + <span class="string">'&lt;/div&gt;&lt;div class="modal-buttons '</span> + verticalButtons + <span class="string">'"&gt;'</span> + buttonsHTML + <span class="string">'&lt;/div&gt;&lt;/div&gt;'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        _modalTemplateTempDiv.innerHTML = modalHTML;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> modal = $(_modalTemplateTempDiv).children();</span><br><span class="line"></span><br><span class="line">        $(<span class="string">'body'</span>).append(modal[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Add events on buttons</span></span><br><span class="line">        modal.find(<span class="string">'.modal-button'</span>).each(<span class="function"><span class="keyword">function</span> (<span class="params">index, el</span>) </span>&#123;</span><br><span class="line">            $(el).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (params.buttons[index].close !== <span class="literal">false</span>) closeModal(modal);</span><br><span class="line">                <span class="keyword">if</span> (params.buttons[index].onClick) params.buttons[index].onClick(modal, e);</span><br><span class="line">                <span class="keyword">if</span> (params.onClick) params.onClick(modal, index);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">        openModal(modal);</span><br><span class="line">        <span class="keyword">return</span> modal;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">openModal</span>(<span class="params">modal</span>) </span>&#123;</span><br><span class="line">        modal = $(modal);</span><br><span class="line">        <span class="keyword">var</span> isModal = modal.hasClass(<span class="string">'modal'</span>);</span><br><span class="line">        <span class="keyword">if</span> ($(<span class="string">'.modal.modal-in:not(.modal-out)'</span>).length &amp;&amp; isModal) &#123;</span><br><span class="line">            modalStack.push(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                openModal(modal);</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// do nothing if this modal already shown</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="literal">true</span> === modal.data(<span class="string">'f7-modal-shown'</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        modal.data(<span class="string">'f7-modal-shown'</span>, <span class="literal">true</span>);</span><br><span class="line">        modal.trigger(<span class="string">'close'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            modal.removeData(<span class="string">'f7-modal-shown'</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">if</span> (isModal) &#123;</span><br><span class="line">            modal.show();</span><br><span class="line">            modal.css(&#123;</span><br><span class="line">                marginTop: -<span class="built_in">Math</span>.round(modal.outerHeight() / <span class="number">2</span>) + <span class="string">'px'</span></span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> ($(<span class="string">'.modal-overlay'</span>).length === <span class="number">0</span>) &#123;</span><br><span class="line">            $(<span class="string">'body'</span>).append(<span class="string">'&lt;div class="modal-overlay"&gt;&lt;/div&gt;'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> overlay = $(<span class="string">'.modal-overlay'</span>);</span><br><span class="line">        <span class="comment">//Make sure that styles are applied, trigger relayout;</span></span><br><span class="line">        <span class="keyword">var</span> clientLeft = modal[<span class="number">0</span>].clientLeft;<span class="comment">//这个不能删,删了actions动画没了.</span></span><br><span class="line">        <span class="comment">// Trugger open event</span></span><br><span class="line">        modal.trigger(<span class="string">'open'</span>);</span><br><span class="line">        <span class="comment">// Classes for transition in</span></span><br><span class="line">        overlay.addClass(<span class="string">'modal-overlay-visible'</span>);</span><br><span class="line">        modal.removeClass(<span class="string">'modal-out'</span>).addClass(<span class="string">'modal-in'</span>).transitionEnd(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (modal.hasClass(<span class="string">'modal-out'</span>)) modal.trigger(<span class="string">'closed'</span>);</span><br><span class="line">            <span class="keyword">else</span> modal.trigger(<span class="string">'opened'</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">closeModal</span>(<span class="params">modal</span>) </span>&#123;</span><br><span class="line">        modal = $(modal || <span class="string">'.modal-in'</span>);</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> modal !== <span class="string">'undefined'</span> &amp;&amp; modal.length === <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">var</span> isModal = modal.hasClass(<span class="string">'modal'</span>);</span><br><span class="line">        <span class="keyword">var</span> overlay = $(<span class="string">'.modal-overlay'</span>);</span><br><span class="line">        <span class="keyword">if</span> (overlay &amp;&amp; overlay.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            overlay.removeClass(<span class="string">'modal-overlay-visible'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        modal.trigger(<span class="string">'close'</span>);</span><br><span class="line">        modal.removeClass(<span class="string">'modal-in'</span>).addClass(<span class="string">'modal-out'</span>).transitionEnd(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (modal.hasClass(<span class="string">'modal-out'</span>)) modal.trigger(<span class="string">'closed'</span>);</span><br><span class="line">            <span class="keyword">else</span> modal.trigger(<span class="string">'opened'</span>);</span><br><span class="line">            modal.remove();</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">if</span> (isModal) &#123;</span><br><span class="line">            modalStackClearQueue();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">modalStackClearQueue</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (modalStack.length) &#123;</span><br><span class="line">            (modalStack.shift())();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> modalTitle = <span class="string">'提示'</span>;</span><br><span class="line">    <span class="keyword">var</span> modalButtonOk = <span class="string">'确定'</span>;</span><br><span class="line">    <span class="keyword">var</span> modalButtonCancel = <span class="string">'取消'</span>;</span><br><span class="line">    <span class="keyword">var</span> modalPreloaderTitle = <span class="string">'加载中'</span>;</span><br><span class="line">    $.extend(&#123;</span><br><span class="line">        alert: <span class="function"><span class="keyword">function</span> (<span class="params">text, title, callbackOk</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> title === <span class="string">'function'</span>) &#123;</span><br><span class="line">                callbackOk = <span class="built_in">arguments</span>[<span class="number">1</span>];</span><br><span class="line">                title = <span class="literal">undefined</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> modal(&#123;</span><br><span class="line">                text: text || <span class="string">''</span>,</span><br><span class="line">                title: <span class="keyword">typeof</span> title === <span class="string">'undefined'</span> ? modalTitle : title,</span><br><span class="line">                buttons: [</span><br><span class="line">                    &#123;<span class="attr">text</span>: modalButtonOk, <span class="attr">bold</span>: <span class="literal">true</span>, <span class="attr">onClick</span>: callbackOk&#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line">        confirm: <span class="function"><span class="keyword">function</span> (<span class="params">text, title, callbackOk, callbackCancel</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> title === <span class="string">'function'</span>) &#123;</span><br><span class="line">                callbackCancel = <span class="built_in">arguments</span>[<span class="number">2</span>];</span><br><span class="line">                callbackOk = <span class="built_in">arguments</span>[<span class="number">1</span>];</span><br><span class="line">                title = <span class="literal">undefined</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> modal(&#123;</span><br><span class="line">                text: text || <span class="string">''</span>,</span><br><span class="line">                title: <span class="keyword">typeof</span> title === <span class="string">'undefined'</span> ? modalTitle : title,</span><br><span class="line">                buttons: [</span><br><span class="line">                    &#123;<span class="attr">text</span>: modalButtonCancel, <span class="attr">onClick</span>: callbackCancel&#125;,</span><br><span class="line">                    &#123;<span class="attr">text</span>: modalButtonOk, <span class="attr">bold</span>: <span class="literal">true</span>, <span class="attr">onClick</span>: callbackOk&#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line">        showPreloader: <span class="function"><span class="keyword">function</span> (<span class="params">title</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> modal(&#123;</span><br><span class="line">                title: title || modalPreloaderTitle,</span><br><span class="line">                text: <span class="string">'&lt;div class="preloader"&gt;&lt;/div&gt;'</span>,</span><br><span class="line">                cssClass: <span class="string">'modal-preloader'</span></span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;,</span><br><span class="line">        hidePreloader: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            closeModal(<span class="string">'.modal.modal-in'</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        showIndicator: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">//$('body').append('&lt;div class="preloader-indicator-overlay"&gt;&lt;/div&gt;&lt;div class="preloader-indicator-modal"&gt;&lt;span class="preloader preloader-white"&gt;&lt;/span&gt;&lt;/div&gt;');</span></span><br><span class="line">            <span class="comment">//去掉全屏透明遮盖层</span></span><br><span class="line">            $(<span class="string">'body'</span>).append(<span class="string">'&lt;div class="preloader-indicator-modal"&gt;&lt;span class="preloader preloader-white"&gt;&lt;/span&gt;&lt;/div&gt;'</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        hideIndicator: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            $(<span class="string">'.preloader-indicator-overlay, .preloader-indicator-modal'</span>).remove();</span><br><span class="line">        &#125;,</span><br><span class="line">        toast: <span class="function"><span class="keyword">function</span> (<span class="params">text, closeCallBack</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> m = modal(&#123;</span><br><span class="line">                title: <span class="string">''</span>,</span><br><span class="line">                text: text</span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">if</span> (closeCallBack) &#123;</span><br><span class="line">                m.on(<span class="string">"close"</span>, closeCallBack);</span><br><span class="line">            &#125;</span><br><span class="line">            setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                closeModal();</span><br><span class="line">            &#125;, <span class="number">1500</span>);</span><br><span class="line">            <span class="keyword">return</span> modal</span><br><span class="line">        &#125;,</span><br><span class="line">        actions: <span class="function"><span class="keyword">function</span> (<span class="params">params</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> modal, groupSelector, buttonSelector;</span><br><span class="line"></span><br><span class="line">            params = params || [];</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (params.length &gt; <span class="number">0</span> &amp;&amp; !$.isArray(params[<span class="number">0</span>])) &#123;</span><br><span class="line">                params = [params];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">var</span> modalHTML;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> buttonsHTML = <span class="string">''</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; params.length; i++) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; params[i].length; j++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (j === <span class="number">0</span>) buttonsHTML += <span class="string">'&lt;div class="actions-modal-group"&gt;'</span>;</span><br><span class="line">                    <span class="keyword">var</span> button = params[i][j];</span><br><span class="line">                    <span class="keyword">var</span> buttonClass = button.label ? <span class="string">'actions-modal-label'</span> : <span class="string">'actions-modal-button'</span>;</span><br><span class="line">                    <span class="keyword">if</span> (button.bold) buttonClass += <span class="string">' actions-modal-button-bold'</span>;</span><br><span class="line">                    <span class="keyword">if</span> (button.color) buttonClass += <span class="string">' color-'</span> + button.color;</span><br><span class="line">                    <span class="keyword">if</span> (button.bg) buttonClass += <span class="string">' bg-'</span> + button.bg;</span><br><span class="line">                    <span class="keyword">if</span> (button.disabled) buttonClass += <span class="string">' disabled'</span>;</span><br><span class="line">                    buttonsHTML += <span class="string">'&lt;div class="'</span> + buttonClass + <span class="string">'"&gt;'</span> + button.text + <span class="string">'&lt;/div&gt;'</span>;</span><br><span class="line">                    <span class="keyword">if</span> (j === params[i].length - <span class="number">1</span>) buttonsHTML += <span class="string">'&lt;/div&gt;'</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            modalHTML = <span class="string">'&lt;div class="actions-modal"&gt;'</span> + buttonsHTML + <span class="string">'&lt;/div&gt;'</span>;</span><br><span class="line">            _modalTemplateTempDiv.innerHTML = modalHTML;</span><br><span class="line">            modal = $(_modalTemplateTempDiv).children();</span><br><span class="line">            $(<span class="string">'body'</span>).append(modal[<span class="number">0</span>]);</span><br><span class="line">            groupSelector = <span class="string">'.actions-modal-group'</span>;</span><br><span class="line">            buttonSelector = <span class="string">'.actions-modal-button'</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">var</span> groups = modal.find(groupSelector);</span><br><span class="line">            groups.each(<span class="function"><span class="keyword">function</span> (<span class="params">index, el</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> groupIndex = index;</span><br><span class="line">                $(el).children().each(<span class="function"><span class="keyword">function</span> (<span class="params">index, el</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">var</span> buttonIndex = index;</span><br><span class="line">                    <span class="keyword">var</span> buttonParams = params[groupIndex][buttonIndex];</span><br><span class="line">                    <span class="keyword">var</span> clickTarget;</span><br><span class="line">                    <span class="keyword">if</span> ($(el).is(buttonSelector)) clickTarget = $(el);</span><br><span class="line">                    <span class="keyword">if</span> ($(el).find(buttonSelector).length &gt; <span class="number">0</span>) clickTarget = $(el).find(buttonSelector);</span><br><span class="line"></span><br><span class="line">                    <span class="keyword">if</span> (clickTarget) &#123;</span><br><span class="line">                        clickTarget.on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">                            <span class="keyword">if</span> (buttonParams.close !== <span class="literal">false</span>) closeModal(modal);</span><br><span class="line">                            <span class="keyword">if</span> (buttonParams.onClick) buttonParams.onClick(modal, e);</span><br><span class="line">                        &#125;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line">            openModal(modal);</span><br><span class="line">            <span class="keyword">return</span> modal;</span><br><span class="line">        &#125;,</span><br><span class="line">        closeModal: closeModal</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)(jQuery, <span class="built_in">window</span>, <span class="built_in">document</span>);</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zkboys.com/2016/05/31/web弹框插件设计/" data-id="cje5b2epg005axv9frulu95cu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/弹框/">弹框</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/31/Git使用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Git使用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/29/使用IntelliJ系列IDE，导致webpack-dev-server监听文件失效问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">使用IntelliJ系列IDE，导致webpack-dev-server监听文件失效问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+	
+	<section id="comment">
+		<!-- 多说评论框 start -->
+		<div class="ds-thread" data-thread-key="2016/05/31/web弹框插件设计/" data-title="web弹框插件设计" data-url="http://zkboys.com/2016/05/31/web弹框插件设计/"></div>
+		<!-- 多说评论框 end -->
+		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		<script type="text/javascript">
+		var duoshuoQuery = {short_name:"zkboys"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0]
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		</script>
+		<!-- 多说公共JS代码 end -->
+	</section>
+	
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul class="recent-post">
+        
+          <li>
+            <a href="/2018/02/27/cross-env/">cross-env</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/28/nginx操作/">nginx操作</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/29/git-tag/">git tag</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/02/数组选出几个数相加等于固定值/">数组选出几个数相加等于固定值</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/02/bind-polyfill/">bind polyfill</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/27/通过时间戳获取索引的一个有趣的算法题/">通过时间戳获取索引的一个有趣的算法题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/17/Vue2-0-跨组件事件/">Vue2.0 跨组件事件</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS获取窗滚动条位置/">JS获取窗滚动条位置</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS获取窗口尺寸/">JS获取窗口尺寸</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS解析query-string/">JS解析query-string</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">50</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/HTML/">HTML</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JS/">JS</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/构建/">构建</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/监控/">监控</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/">后端</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/后端/nginx/">nginx</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/node/">node</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/shell/">shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/数据库/">数据库</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/实现方案/">实现方案</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转载/">转载</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redux/">Redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/color/">color</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cross-env/">cross-env</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docs/">docs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/doctype/">doctype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emmet/">emmet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/meta/">meta</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/polyfill/">polyfill</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh-key/">ssh-key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/state-machine/">state-machine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tabs/">tabs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分页/">分页</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端上报错误信息/">前端上报错误信息</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单页面/">单页面</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹框/">弹框</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/按钮/">按钮</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境搭建/">环境搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/错误/">错误</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/React/" style="font-size: 18px;">React</a> <a href="/tags/Redux/" style="font-size: 10px;">Redux</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/color/" style="font-size: 10px;">color</a> <a href="/tags/cross-env/" style="font-size: 10px;">cross-env</a> <a href="/tags/css/" style="font-size: 16px;">css</a> <a href="/tags/docs/" style="font-size: 10px;">docs</a> <a href="/tags/doctype/" style="font-size: 10px;">doctype</a> <a href="/tags/emmet/" style="font-size: 10px;">emmet</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/github/" style="font-size: 14px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 12px;">html</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/meta/" style="font-size: 12px;">meta</a> <a href="/tags/mongodb/" style="font-size: 12px;">mongodb</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 16px;">node</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/polyfill/" style="font-size: 10px;">polyfill</a> <a href="/tags/ssh-key/" style="font-size: 10px;">ssh-key</a> <a href="/tags/state-machine/" style="font-size: 10px;">state-machine</a> <a href="/tags/tabs/" style="font-size: 10px;">tabs</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/webpack/" style="font-size: 18px;">webpack</a> <a href="/tags/分页/" style="font-size: 10px;">分页</a> <a href="/tags/前端上报错误信息/" style="font-size: 10px;">前端上报错误信息</a> <a href="/tags/单页面/" style="font-size: 10px;">单页面</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/布局/" style="font-size: 12px;">布局</a> <a href="/tags/弹框/" style="font-size: 10px;">弹框</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/按钮/" style="font-size: 10px;">按钮</a> <a href="/tags/数据库/" style="font-size: 12px;">数据库</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/环境搭建/" style="font-size: 10px;">环境搭建</a> <a href="/tags/算法/" style="font-size: 12px;">算法</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a> <a href="/tags/错误/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">19</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 WangShubin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script src="/js/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script src="/js/script.js"></script>
+
+
+<script>
+    function getRandomNum(min, max) {
+        var range = max - min;
+        var rand = Math.random();
+        return (min + Math.round(rand * range));
+    }
+    $(function () {
+        var n = getRandomNum(1, 10);
+        var animationSrc = '/canvas-animation/' + n + '.html';
+        $('#canvas-animation').attr('src', animationSrc);
+    });
+</script>
+
+  </div>
+</body>
+</html>

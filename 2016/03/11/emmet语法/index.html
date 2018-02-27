@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>emmet语法 | ZKBOYS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="element标签名123div...will produce:&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; IDid选择符123div#some-id 或者 #some-id...will produce:&amp;lt;div id=&amp;quot;some-id&amp;quot;&amp;gt;&amp;lt;div&amp;gt; CLASS类选择符123div.some-class 或者 .some-class...will">
+<meta name="keywords" content="emmet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="emmet语法">
+<meta property="og:url" content="http://zkboys.com/2016/03/11/emmet语法/index.html">
+<meta property="og:site_name" content="ZKBOYS">
+<meta property="og:description" content="element标签名123div...will produce:&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; IDid选择符123div#some-id 或者 #some-id...will produce:&amp;lt;div id=&amp;quot;some-id&amp;quot;&amp;gt;&amp;lt;div&amp;gt; CLASS类选择符123div.some-class 或者 .some-class...will">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-01-06T03:44:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="emmet语法">
+<meta name="twitter:description" content="element标签名123div...will produce:&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; IDid选择符123div#some-id 或者 #some-id...will produce:&amp;lt;div id=&amp;quot;some-id&amp;quot;&amp;gt;&amp;lt;div&amp;gt; CLASS类选择符123div.some-class 或者 .some-class...will">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/fonts-googleapis/fonts-googleapis.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header" style="overflow: hidden">
+    <div id="banner">
+        <iframe id="canvas-animation" src="/canvas-animation/1.html" frameborder="0" style="width: 100%; height: 100%"></iframe>
+    </div>
+    <div id="header-outer">
+        <div class="outer">
+            <div id="header-title" class="inner">
+                <a href="/">
+                  <div class="header-img"></div>
+                </a>
+                <h1 id="logo-wrap">
+                    <a href="/" id="logo">ZKBOYS</a>
+                </h1>
+                
+                <h2 id="subtitle-wrap">
+                    <a href="/" id="subtitle">I&#39;m a 博客</a>
+                </h2>
+                
+            </div>
+            <div id="header-inner" class="inner">
+                <nav id="main-nav">
+                    <a id="main-nav-toggle" class="nav-icon"></a>
+                    
+                    <a class="main-nav-link" href="/">Home</a>
+                    
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                    
+                </nav>
+                <nav id="sub-nav">
+                    
+                    <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+                </nav>
+                <div id="search-form-wrap">
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zkboys.com"></form>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="liquid">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -10"></feColorMatrix>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-emmet语法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/11/emmet语法/" class="article-date">
+  <time datetime="2016-03-11T06:35:53.000Z" itemprop="datePublished">2016-03-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/工具/">工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      emmet语法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h2 id="element标签名"><a href="#element标签名" class="headerlink" title="element标签名"></a><code>element</code>标签名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div</span><br><span class="line">...will produce:</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="IDid选择符"><a href="#IDid选择符" class="headerlink" title="IDid选择符"></a><code>ID</code>id选择符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div#some-id 或者 #some-id</span><br><span class="line">...will produce:</span><br><span class="line">&lt;div id=&quot;some-id&quot;&gt;&lt;div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="CLASS类选择符"><a href="#CLASS类选择符" class="headerlink" title="CLASS类选择符"></a><code>CLASS</code>类选择符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div.some-class 或者 .some-class</span><br><span class="line">...will produce:</span><br><span class="line">&lt;div class=&quot;some-class&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="gt-嵌套，直接子节点"><a href="#gt-嵌套，直接子节点" class="headerlink" title="&gt; 嵌套，直接子节点"></a><code>&gt;</code> 嵌套，直接子节点</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div&gt;ul&gt;li</span><br><span class="line">...will produce:</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;/ul&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="兄弟节点"><a href="#兄弟节点" class="headerlink" title="+兄弟节点"></a><code>+</code>兄弟节点</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div+p+bq</span><br><span class="line">...will produce:</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;p&gt;&lt;/p&gt;</span><br><span class="line">&lt;blockquote&gt;&lt;/blockquote&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="切换上下文，返回上一级"><a href="#切换上下文，返回上一级" class="headerlink" title="^切换上下文，返回上一级"></a><code>^</code>切换上下文，返回上一级</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div+div&gt;p&gt;span+em^bq</span><br><span class="line">...will produce:</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;</span><br><span class="line">    &lt;blockquote&gt;&lt;/blockquote&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="可以多个一起使用，每一个返回一级"><a href="#可以多个一起使用，每一个返回一级" class="headerlink" title="可以多个一起使用，每一个返回一级"></a>可以多个一起使用，每一个返回一级</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div+div&gt;p&gt;span+em^^^bq</span><br><span class="line">...will produce:</span><br><span class="line">&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;blockquote&gt;&lt;/blockquote&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="重复多个"><a href="#重复多个" class="headerlink" title="* 重复多个"></a><code>*</code> 重复多个</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li*5</span><br><span class="line">...will produce:</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="分组，用来分组子集，不推荐过多使用"><a href="#分组，用来分组子集，不推荐过多使用" class="headerlink" title="()分组，用来分组子集，不推荐过多使用"></a><code>()</code>分组，用来分组子集，不推荐过多使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">div&gt;(header&gt;ul&gt;li*2&gt;a)+footer&gt;p</span><br><span class="line">...will produce:</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/header&gt;</span><br><span class="line">    &lt;footer&gt;</span><br><span class="line">        &lt;p&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/footer&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="可以嵌套使用"><a href="#可以嵌套使用" class="headerlink" title="()可以嵌套使用"></a><code>()</code>可以嵌套使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">(div&gt;dl&gt;(dt+dd)*3)+footer&gt;p</span><br><span class="line">...will produce:</span><br><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;dl&gt;</span><br><span class="line">        &lt;dt&gt;&lt;/dt&gt;</span><br><span class="line">        &lt;dd&gt;&lt;/dd&gt;</span><br><span class="line">        &lt;dt&gt;&lt;/dt&gt;</span><br><span class="line">        &lt;dd&gt;&lt;/dd&gt;</span><br><span class="line">        &lt;dt&gt;&lt;/dt&gt;</span><br><span class="line">        &lt;dd&gt;&lt;/dd&gt;</span><br><span class="line">    &lt;/dl&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;footer&gt;</span><br><span class="line">    &lt;p&gt;&lt;/p&gt;</span><br><span class="line">&lt;/footer&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="用户自定义属性"><a href="#用户自定义属性" class="headerlink" title="[]用户自定义属性"></a><code>[]</code>用户自定义属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div[title=&quot;Hello world!&quot;]</span><br><span class="line">...will produce:</span><br><span class="line">&lt;div title=&quot;Hello world!&quot; data-name=&quot;haha&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h3><ul>
+<li>方括号内可以一次性写多个属性，以空格隔开，比如：[title=’H W’ data-name=haha]</li>
+<li>属性可以不写属性值，比如：[title data-name]</li>
+<li>属性值可以使用单引号或者双引号</li>
+<li>属性值如果没有空格，可以省略引号</li>
+</ul>
+<h2 id="数字"><a href="#数字" class="headerlink" title="$数字"></a><code>$</code>数字</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li.item$*5</span><br><span class="line">...will produce:</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="可以使用多个-，不足会使用0站位"><a href="#可以使用多个-，不足会使用0站位" class="headerlink" title="可以使用多个$，不足会使用0站位"></a>可以使用多个<code>$</code>，不足会使用<code>0</code>站位</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li.item$$$*5</span><br><span class="line">...will produce:</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item001&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item002&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item003&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item004&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item005&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="控制数字开始值和顺序"><a href="#控制数字开始值和顺序" class="headerlink" title="@控制数字开始值和顺序"></a><code>@</code>控制数字开始值和顺序</h3><h4 id="倒序"><a href="#倒序" class="headerlink" title="@- 倒序"></a><code>@-</code> 倒序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li.item$@-*5</span><br><span class="line">...will produce:</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item2&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item1&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="n-改变数字开始位置"><a href="#n-改变数字开始位置" class="headerlink" title="@n 改变数字开始位置"></a><code>@n</code> 改变数字开始位置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li.item$@3*5</span><br><span class="line">...will produce:</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item6&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item7&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="n-降序并改变开始位置"><a href="#n-降序并改变开始位置" class="headerlink" title="@-n 降序并改变开始位置"></a><code>@-n</code> 降序并改变开始位置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ul&gt;li.item$@-3*5</span><br><span class="line">...will produce:</span><br><span class="line">&lt;ul&gt;</span><br><span class="line">    &lt;li class=&quot;item7&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item6&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item5&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item4&quot;&gt;&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item3&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="文本节点"><a href="#文本节点" class="headerlink" title="{}文本节点"></a><code>{}</code>文本节点</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a&#123;Click me&#125;</span><br><span class="line">...will produce:</span><br><span class="line">&lt;a href=&quot;&quot;&gt;Click me&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="注意如下的区别（受-gt-影响）"><a href="#注意如下的区别（受-gt-影响）" class="headerlink" title="注意如下的区别（受&gt;影响）"></a>注意如下的区别（受<code>&gt;</code>影响）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a&#123;click&#125;+b&#123;here&#125;</span><br><span class="line">...will produce:</span><br><span class="line">&lt;a href=&quot;&quot;&gt;click&lt;/a&gt;&lt;b&gt;here&lt;/b&gt;</span><br><span class="line"></span><br><span class="line">a&gt;&#123;click&#125;+b&#123;here&#125;</span><br><span class="line">...will produce:</span><br><span class="line">&lt;a href=&quot;&quot;&gt;click&lt;b&gt;here&lt;/b&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="缺省表签名"><a href="#缺省表签名" class="headerlink" title="缺省表签名"></a>缺省表签名</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#some-id                  div#some-id</span><br><span class="line">.some-class               div.some-class</span><br><span class="line">.wrap&gt;.content            div.wrap&gt;div.content</span><br><span class="line">em&gt;.info                  em&gt;span.info</span><br><span class="line">ul&gt;.item*3                ul&gt;li.item*3</span><br><span class="line">table&gt;#row$*4&gt;[colspan=2] table&gt;tr#row$*4&gt;td[colspan=2]</span><br></pre></td></tr></table></figure>
+<h3 id="缺省标签名之后，emmet会根据父级标签确定表签名，一些例子："><a href="#缺省标签名之后，emmet会根据父级标签确定表签名，一些例子：" class="headerlink" title="缺省标签名之后，emmet会根据父级标签确定表签名，一些例子："></a>缺省标签名之后，emmet会根据父级标签确定表签名，一些例子：</h3><ul>
+<li>li for ul and ol</li>
+<li>tr for table, tbody, thead and tfoot</li>
+<li>td for tr</li>
+<li>option for select and optgroup</li>
+</ul>
+<h2 id="lorem-生成一段虚拟文字，一般用来快速填充html，查看效果"><a href="#lorem-生成一段虚拟文字，一般用来快速填充html，查看效果" class="headerlink" title="lorem 生成一段虚拟文字，一般用来快速填充html，查看效果"></a><code>lorem</code> 生成一段虚拟文字，一般用来快速填充html，查看效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">lorem</span><br><span class="line">...will produce:</span><br><span class="line">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias et nemo repudiandae. Esse ex molestias numquam, possimus quaerat quas sint tempora? Asperiores dicta ducimus facilis impedit neque ratione ut vel!</span><br><span class="line"></span><br><span class="line">lorem10 //生成10个单词</span><br><span class="line">...will produce:</span><br><span class="line">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, totam.</span><br><span class="line"></span><br><span class="line">p*4&gt;lorem</span><br><span class="line">...will produce:</span><br><span class="line">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!&lt;/p&gt;</span><br><span class="line">&lt;p&gt;Ad dolore dignissimos asperiores dicta facere optio quod commodi nam tempore recusandae. Rerum sed nulla eum vero expedita ex delectus voluptates rem at neque quos facere sequi unde optio aliquam!&lt;/p&gt;</span><br><span class="line">&lt;p&gt;Tenetur quod quidem in voluptatem corporis dolorum dicta sit pariatur porro quaerat autem ipsam odit quam beatae tempora quibusdam illum! Modi velit odio nam nulla unde amet odit pariatur at!&lt;/p&gt;</span><br><span class="line">&lt;p&gt;Consequatur rerum amet fuga expedita sunt et tempora saepe? Iusto nihil explicabo perferendis quos provident delectus ducimus necessitatibus reiciendis optio tempora unde earum doloremque commodi laudantium ad nulla vel odio?&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">ul.generic-list&gt;lorem10.item*4  //10是只每行10个单词</span><br><span class="line">...will produce:</span><br><span class="line">&lt;ul class=&quot;generic-list&quot;&gt;</span><br><span class="line">    &lt;li class=&quot;item&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam vero.&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item&quot;&gt;Laboriosam quaerat sapiente minima nam minus similique illum architecto et!&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item&quot;&gt;Incidunt vitae quae facere ducimus nostrum aliquid dolorum veritatis dicta!&lt;/li&gt;</span><br><span class="line">    &lt;li class=&quot;item&quot;&gt;Tenetur laborum quod cum excepturi recusandae porro sint quas soluta!&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><ul>
+<li>空格是emmet停止转换的分隔符，一个emmt语句中，不能有空格</li>
+<li>不要写太复杂的语法，写太复杂了容易出错。</li>
+</ul>
+<h2 id="参考连接"><a href="#参考连接" class="headerlink" title="参考连接"></a>参考连接</h2><p>emmet官网 <a href="http://docs.emmet.io/" target="_blank" rel="noopener">http://docs.emmet.io/</a><br>emmet语法查询 <a href="http://emmet.evget.com/" target="_blank" rel="noopener">http://emmet.evget.com/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zkboys.com/2016/03/11/emmet语法/" data-id="cje5b2eo7002dxv9f1nzvrmru" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emmet/">emmet</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/03/14/JS函数节流/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JS函数节流/截流
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/03/11/css选择器/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">css选择器</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+	
+	<section id="comment">
+		<!-- 多说评论框 start -->
+		<div class="ds-thread" data-thread-key="2016/03/11/emmet语法/" data-title="emmet语法" data-url="http://zkboys.com/2016/03/11/emmet语法/"></div>
+		<!-- 多说评论框 end -->
+		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		<script type="text/javascript">
+		var duoshuoQuery = {short_name:"zkboys"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0]
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		</script>
+		<!-- 多说公共JS代码 end -->
+	</section>
+	
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul class="recent-post">
+        
+          <li>
+            <a href="/2018/02/27/cross-env/">cross-env</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/28/nginx操作/">nginx操作</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/29/git-tag/">git tag</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/02/数组选出几个数相加等于固定值/">数组选出几个数相加等于固定值</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/02/bind-polyfill/">bind polyfill</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/27/通过时间戳获取索引的一个有趣的算法题/">通过时间戳获取索引的一个有趣的算法题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/17/Vue2-0-跨组件事件/">Vue2.0 跨组件事件</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS获取窗滚动条位置/">JS获取窗滚动条位置</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS获取窗口尺寸/">JS获取窗口尺寸</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/15/JS解析query-string/">JS解析query-string</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">50</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/HTML/">HTML</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JS/">JS</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/构建/">构建</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/监控/">监控</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/">后端</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/后端/nginx/">nginx</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/node/">node</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/shell/">shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/数据库/">数据库</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/实现方案/">实现方案</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转载/">转载</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redux/">Redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/color/">color</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cross-env/">cross-env</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docs/">docs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/doctype/">doctype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emmet/">emmet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/meta/">meta</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/polyfill/">polyfill</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh-key/">ssh-key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/state-machine/">state-machine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tabs/">tabs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分页/">分页</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端上报错误信息/">前端上报错误信息</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单页面/">单页面</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹框/">弹框</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/按钮/">按钮</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境搭建/">环境搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/错误/">错误</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/React/" style="font-size: 18px;">React</a> <a href="/tags/Redux/" style="font-size: 10px;">Redux</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/color/" style="font-size: 10px;">color</a> <a href="/tags/cross-env/" style="font-size: 10px;">cross-env</a> <a href="/tags/css/" style="font-size: 16px;">css</a> <a href="/tags/docs/" style="font-size: 10px;">docs</a> <a href="/tags/doctype/" style="font-size: 10px;">doctype</a> <a href="/tags/emmet/" style="font-size: 10px;">emmet</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/github/" style="font-size: 14px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 12px;">html</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/meta/" style="font-size: 12px;">meta</a> <a href="/tags/mongodb/" style="font-size: 12px;">mongodb</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 16px;">node</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/polyfill/" style="font-size: 10px;">polyfill</a> <a href="/tags/ssh-key/" style="font-size: 10px;">ssh-key</a> <a href="/tags/state-machine/" style="font-size: 10px;">state-machine</a> <a href="/tags/tabs/" style="font-size: 10px;">tabs</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/webpack/" style="font-size: 18px;">webpack</a> <a href="/tags/分页/" style="font-size: 10px;">分页</a> <a href="/tags/前端上报错误信息/" style="font-size: 10px;">前端上报错误信息</a> <a href="/tags/单页面/" style="font-size: 10px;">单页面</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/布局/" style="font-size: 12px;">布局</a> <a href="/tags/弹框/" style="font-size: 10px;">弹框</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/按钮/" style="font-size: 10px;">按钮</a> <a href="/tags/数据库/" style="font-size: 12px;">数据库</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/环境搭建/" style="font-size: 10px;">环境搭建</a> <a href="/tags/算法/" style="font-size: 12px;">算法</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a> <a href="/tags/错误/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">19</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 WangShubin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script src="/js/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script src="/js/script.js"></script>
+
+
+<script>
+    function getRandomNum(min, max) {
+        var range = max - min;
+        var rand = Math.random();
+        return (min + Math.round(rand * range));
+    }
+    $(function () {
+        var n = getRandomNum(1, 10);
+        var animationSrc = '/canvas-animation/' + n + '.html';
+        $('#canvas-animation').attr('src', animationSrc);
+    });
+</script>
+
+  </div>
+</body>
+</html>
