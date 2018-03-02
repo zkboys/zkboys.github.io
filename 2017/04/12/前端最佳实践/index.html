@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>前端最佳实践 | ZKBOYS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前端最佳实践 项目怎么都能写，但是如何写的优雅？如何省时省力？如何构建大型项目，而不乱？需要总结一些最佳实践~  核心问题 如何进行组件的划分 组件如何方便的获取（后端）数据 组件如何方便的修改（后端）数据  封装的目的是什么？ 包装复杂逻辑 提供简单接口 方便调用 简化开发 少写代码 功能统一 样式统一 代码风格统一 代码生成 可维护性 扩展性 健壮性 可读性  前端目录结构组织 前提要划分好需">
+<meta name="keywords" content="最佳实践">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端最佳实践">
+<meta property="og:url" content="http://zkboys.com/2017/04/12/前端最佳实践/index.html">
+<meta property="og:site_name" content="ZKBOYS">
+<meta property="og:description" content="前端最佳实践 项目怎么都能写，但是如何写的优雅？如何省时省力？如何构建大型项目，而不乱？需要总结一些最佳实践~  核心问题 如何进行组件的划分 组件如何方便的获取（后端）数据 组件如何方便的修改（后端）数据  封装的目的是什么？ 包装复杂逻辑 提供简单接口 方便调用 简化开发 少写代码 功能统一 样式统一 代码风格统一 代码生成 可维护性 扩展性 健壮性 可读性  前端目录结构组织 前提要划分好需">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-02T01:05:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端最佳实践">
+<meta name="twitter:description" content="前端最佳实践 项目怎么都能写，但是如何写的优雅？如何省时省力？如何构建大型项目，而不乱？需要总结一些最佳实践~  核心问题 如何进行组件的划分 组件如何方便的获取（后端）数据 组件如何方便的修改（后端）数据  封装的目的是什么？ 包装复杂逻辑 提供简单接口 方便调用 简化开发 少写代码 功能统一 样式统一 代码风格统一 代码生成 可维护性 扩展性 健壮性 可读性  前端目录结构组织 前提要划分好需">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+  <link rel="stylesheet" href="/css/fonts-googleapis/fonts-googleapis.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header" style="overflow: hidden">
+    <div id="banner">
+        <iframe id="canvas-animation" src="/canvas-animation/1.html" frameborder="0" style="width: 100%; height: 100%"></iframe>
+    </div>
+    <div id="header-outer">
+        <div class="outer">
+            <div id="header-title" class="inner">
+                <a href="/">
+                  <div class="header-img"></div>
+                </a>
+                <h1 id="logo-wrap">
+                    <a href="/" id="logo">ZKBOYS</a>
+                </h1>
+                
+                <h2 id="subtitle-wrap">
+                    <a href="/" id="subtitle">I&#39;m a 博客</a>
+                </h2>
+                
+            </div>
+            <div id="header-inner" class="inner">
+                <nav id="main-nav">
+                    <a id="main-nav-toggle" class="nav-icon"></a>
+                    
+                    <a class="main-nav-link" href="/">Home</a>
+                    
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                    
+                </nav>
+                <nav id="sub-nav">
+                    
+                    <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+                </nav>
+                <div id="search-form-wrap">
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://zkboys.com"></form>
+                </div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                    <filter id="liquid">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -10"></feColorMatrix>
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-前端最佳实践" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/12/前端最佳实践/" class="article-date">
+  <time datetime="2017-04-12T07:04:58.000Z" itemprop="datePublished">2017-04-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/规范/">规范</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      前端最佳实践
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h1 id="前端最佳实践"><a href="#前端最佳实践" class="headerlink" title="前端最佳实践"></a>前端最佳实践</h1><blockquote>
+<p>项目怎么都能写，但是如何写的优雅？如何省时省力？如何构建大型项目，而不乱？需要总结一些最佳实践~</p>
+</blockquote>
+<h2 id="核心问题"><a href="#核心问题" class="headerlink" title="核心问题"></a>核心问题</h2><ul>
+<li>如何进行组件的划分</li>
+<li>组件如何方便的获取（后端）数据</li>
+<li>组件如何方便的修改（后端）数据</li>
+</ul>
+<h2 id="封装的目的是什么？"><a href="#封装的目的是什么？" class="headerlink" title="封装的目的是什么？"></a>封装的目的是什么？</h2><ul>
+<li>包装复杂逻辑</li>
+<li>提供简单接口</li>
+<li>方便调用</li>
+<li>简化开发</li>
+<li>少写代码</li>
+<li>功能统一</li>
+<li>样式统一</li>
+<li>代码风格统一</li>
+<li>代码生成</li>
+<li>可维护性</li>
+<li>扩展性</li>
+<li>健壮性</li>
+<li>可读性</li>
+</ul>
+<h2 id="前端目录结构组织"><a href="#前端目录结构组织" class="headerlink" title="前端目录结构组织"></a>前端目录结构组织</h2><blockquote>
+<p>前提要划分好需求的各个模块，基于模块/功能点对应的建立models/services，否则大型项目，需求越来越多，最终会导致models/services混乱，models命名与其包含的内容不符等问题尽量避免；</p>
+</blockquote>
+<p>如下为src中的目录</p>
+<h3 id="components"><a href="#components" class="headerlink" title="components"></a>components</h3><p>通用业务组件</p>
+<h3 id="models"><a href="#models" class="headerlink" title="models"></a>models</h3><p>数据层，与后端交互，为组件提供数据；</p>
+<h3 id="services"><a href="#services" class="headerlink" title="services"></a>services</h3><p>主要进行一些ajax请求，供models层调用，获取后端数据；<br>是否可以考虑与models层合并?</p>
+<h3 id="pages"><a href="#pages" class="headerlink" title="pages"></a>pages</h3><p>页面，只有pages中的文件与redux连接？；<br>接受models层数据，组合components完成用户交互、数据展示等；</p>
+<h3 id="layouts"><a href="#layouts" class="headerlink" title="layouts"></a>layouts</h3><p>布局，提供整体的结构，头部底部等通用布局组件；</p>
+<h2 id="避免组件频繁渲染"><a href="#避免组件频繁渲染" class="headerlink" title="避免组件频繁渲染"></a>避免组件频繁渲染</h2><blockquote>
+<p>如果一个复杂的页面，组件A嵌套的层次比较深，任何父级组件的重新渲染，都会导致A组件的重新渲染，通过<code>shouldComponentUpdate</code>周期函数，进行优化，避免没有必要的重复渲染；考虑是否使用<a href="https://facebook.github.io/immutable-js/" target="_blank" rel="noopener">immutable-js</a></p>
+</blockquote>
+<h2 id="基础数据放入redux"><a href="#基础数据放入redux" class="headerlink" title="基础数据放入redux"></a>基础数据放入redux</h2><blockquote>
+<p>基础数据，其他业务页面会经常用到，简化获取基础数据方式，有利于各个业务页面获取/使用基础数据；特殊业务的请求是否可以考虑再业务组件中直接发起？不必经过redux？</p>
+</blockquote>
+<p>比如客户数据，提供<code>getCustomer</code> action，用来获取客户数据，如果某个业务组件用到客户数据，直接从redux中获取；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">export function mapStateToProps(state)&#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        customers: state.customer.dataSource,</span><br><span class="line">        customersLoading:: state.customer.loading,</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">componentWillMount()&#123;</span><br><span class="line">    const &#123;</span><br><span class="line">        $actions: &#123;customer&#125;,</span><br><span class="line">    &#125; = this.props;</span><br><span class="line">    </span><br><span class="line">    customer.getCustomer();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">render()&#123;</span><br><span class="line">    const &#123;</span><br><span class="line">        customers,</span><br><span class="line">        customersLoading,</span><br><span class="line">        otherLoading,</span><br><span class="line">    &#125; = this.props;</span><br><span class="line">    </span><br><span class="line">    if(customerLoading || otherLoading) &#123;</span><br><span class="line">        // show loading...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h2 id="提供filter工具"><a href="#提供filter工具" class="headerlink" title="提供filter工具"></a>提供filter工具</h2><p>提供filter工具，用来转换数据显示，比如id转换成对应的label，用于页面显示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// filter.js</span><br><span class="line"></span><br><span class="line">export function filterGender(gender) &#123;</span><br><span class="line">    const genders = &#123;</span><br><span class="line">        male: &apos;男&apos;,</span><br><span class="line">        female: &apos;女&apos;,</span><br><span class="line">        m: &apos;男&apos;,</span><br><span class="line">        f: &apos;女&apos;,</span><br><span class="line">        M: &apos;男&apos;,</span><br><span class="line">        F: &apos;女&apos;,</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    return genders[gender] || &apos;未知&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="复杂页面拆分"><a href="#复杂页面拆分" class="headerlink" title="复杂页面拆分"></a>复杂页面拆分</h2><blockquote>
+<p>部分页面会很复杂，如果所有内容都写到一个文件，将增加修改/维护难度；</p>
+</blockquote>
+<p>可以基于页面结构/功能点，合理的将页面拆分成各个小组件，适当的使用redux进行数据管理；</p>
+<h2 id="通用业务组件抽离"><a href="#通用业务组件抽离" class="headerlink" title="通用业务组件抽离"></a>通用业务组件抽离</h2><blockquote>
+<p>通用的业务组件抽离到components目录中</p>
+</blockquote>
+<h2 id="构建自动化"><a href="#构建自动化" class="headerlink" title="构建自动化"></a>构建自动化</h2><p>前端构建过程要自动化，基本通过几个命令搞定，核心命令有如下几个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 安装所有依赖</span><br><span class="line">$ yarn</span><br><span class="line"></span><br><span class="line">// 启动开发模式</span><br><span class="line">$ yarn start 或 yarn dev </span><br><span class="line"></span><br><span class="line">// 生产构建</span><br><span class="line">$ yarn build </span><br><span class="line"></span><br><span class="line">// 测试</span><br><span class="line">$ yarn test</span><br></pre></td></tr></table></figure></p>
+<h2 id="ajax封装"><a href="#ajax封装" class="headerlink" title="ajax封装"></a>ajax封装</h2><p>只关心请求，成功提示、异常提示要自动化，简单配置就OK；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ajax.put(&apos;/user/123&apos;, params, &#123;successTip: &apos;保存成功！&apos;, errorTip: &apos;保存失败！&apos;&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="函数-组件编写原则"><a href="#函数-组件编写原则" class="headerlink" title="函数/组件编写原则"></a>函数/组件编写原则</h2><ul>
+<li>可用<blockquote>
+<p>编写一个函数/组件最核心也是最低的要求,要达到可用；</p>
+</blockquote>
+</li>
+<li>健壮<blockquote>
+<p>最基本的兼容性处理、边界处理、异常处理、用户输入校验；</p>
+</blockquote>
+</li>
+<li>可靠<blockquote>
+<p>尽可能在任何情况下，都返回一个可靠的结果，哪怕是异常情况下；</p>
+</blockquote>
+</li>
+<li>宽容<blockquote>
+<p>对需求宽容、对用户宽容、对调用者宽容、对维护者宽容；如果函数需要的是数字，调用者传入的是字符串数字是否允许等；</p>
+</blockquote>
+</li>
+<li>精益求精<blockquote>
+<p>可读性、扩展性是否良好？性能怎么样?</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="大型项目"><a href="#大型项目" class="headerlink" title="大型项目"></a>大型项目</h2><p>做大型项目时，一定要组织好基础业务组件，很多模块都会用到的组件，维护好了，可以省很多事儿；</p>
+<h2 id="认证"><a href="#认证" class="headerlink" title="认证"></a>认证</h2><p>单页面应用，一般会涉及跨域问题，cookie有时候不是很适合，最好使用tooken方式，适用面更广，但是浏览器与App不同，要做好安全性方面的工作。团队中有多个项目，最好统一认证方式，可以减少工作量，降低沟通成本；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zkboys.com/2017/04/12/前端最佳实践/" data-id="cje98r9oy0074a09fmxsc4h7i" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/最佳实践/">最佳实践</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/05/05/前后端分离开发约定/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          前后端分离开发约定
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/04/02/GraphQL/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">GraphQL</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+	
+	<section id="comment">
+		<!-- 多说评论框 start -->
+		<div class="ds-thread" data-thread-key="2017/04/12/前端最佳实践/" data-title="前端最佳实践" data-url="http://zkboys.com/2017/04/12/前端最佳实践/"></div>
+		<!-- 多说评论框 end -->
+		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+		<script type="text/javascript">
+		var duoshuoQuery = {short_name:"zkboys"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0]
+			 || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		</script>
+		<!-- 多说公共JS代码 end -->
+	</section>
+	
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul class="recent-post">
+        
+          <li>
+            <a href="/2018/08/09/前端与产品约定/">前端与产品约定</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/02/关于组件化/">关于组件化</a>
+          </li>
+        
+          <li>
+            <a href="/2018/05/22/前端leader工作任务/">前端leader工作任务</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/27/cross-env/">cross-env</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/28/nginx操作/">nginx操作</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/05/前后端分离开发约定/">前后端分离开发约定</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/12/前端最佳实践/">前端最佳实践</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/02/GraphQL/">GraphQL</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/29/git-tag/">git tag</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/02/数组选出几个数相加等于固定值/">数组选出几个数相加等于固定值</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">50</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/HTML/">HTML</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/JS/">JS</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/构建/">构建</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/监控/">监控</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/">后端</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/后端/nginx/">nginx</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/node/">node</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/shell/">shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/数据库/">数据库</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/实现方案/">实现方案</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/规范/">规范</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/转载/">转载</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GraphQL/">GraphQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redux/">Redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/color/">color</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cross-env/">cross-env</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docs/">docs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/doctype/">doctype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/emmet/">emmet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">19</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/meta/">meta</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mongodb/">mongodb</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/polyfill/">polyfill</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh-key/">ssh-key</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/state-machine/">state-machine</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tabs/">tabs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分页/">分页</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端上报错误信息/">前端上报错误信息</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/单页面/">单页面</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/安全/">安全</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/弹框/">弹框</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信/">微信</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/按钮/">按钮</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库/">数据库</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最佳实践/">最佳实践</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/环境搭建/">环境搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/错误/">错误</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/GraphQL/" style="font-size: 10px;">GraphQL</a> <a href="/tags/React/" style="font-size: 18px;">React</a> <a href="/tags/Redux/" style="font-size: 10px;">Redux</a> <a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/color/" style="font-size: 10px;">color</a> <a href="/tags/cross-env/" style="font-size: 10px;">cross-env</a> <a href="/tags/css/" style="font-size: 16px;">css</a> <a href="/tags/docs/" style="font-size: 10px;">docs</a> <a href="/tags/doctype/" style="font-size: 10px;">doctype</a> <a href="/tags/emmet/" style="font-size: 10px;">emmet</a> <a href="/tags/git/" style="font-size: 14px;">git</a> <a href="/tags/github/" style="font-size: 14px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 12px;">html</a> <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/meta/" style="font-size: 12px;">meta</a> <a href="/tags/mongodb/" style="font-size: 12px;">mongodb</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/node/" style="font-size: 16px;">node</a> <a href="/tags/npm/" style="font-size: 10px;">npm</a> <a href="/tags/polyfill/" style="font-size: 10px;">polyfill</a> <a href="/tags/ssh-key/" style="font-size: 10px;">ssh-key</a> <a href="/tags/state-machine/" style="font-size: 10px;">state-machine</a> <a href="/tags/tabs/" style="font-size: 10px;">tabs</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/webpack/" style="font-size: 18px;">webpack</a> <a href="/tags/分页/" style="font-size: 10px;">分页</a> <a href="/tags/前端上报错误信息/" style="font-size: 10px;">前端上报错误信息</a> <a href="/tags/单页面/" style="font-size: 10px;">单页面</a> <a href="/tags/安全/" style="font-size: 10px;">安全</a> <a href="/tags/布局/" style="font-size: 12px;">布局</a> <a href="/tags/弹框/" style="font-size: 10px;">弹框</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/按钮/" style="font-size: 10px;">按钮</a> <a href="/tags/数据库/" style="font-size: 12px;">数据库</a> <a href="/tags/最佳实践/" style="font-size: 16px;">最佳实践</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/环境搭建/" style="font-size: 10px;">环境搭建</a> <a href="/tags/算法/" style="font-size: 12px;">算法</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a> <a href="/tags/规范/" style="font-size: 10px;">规范</a> <a href="/tags/错误/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">19</span></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 WangShubin<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script src="/js/jquery.min.js"></script>
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+<script src="/js/script.js"></script>
+
+
+<script>
+    function getRandomNum(min, max) {
+        var range = max - min;
+        var rand = Math.random();
+        return (min + Math.round(rand * range));
+    }
+    $(function () {
+        var n = getRandomNum(1, 10);
+        var animationSrc = '/canvas-animation/' + n + '.html';
+        $('#canvas-animation').attr('src', animationSrc);
+    });
+</script>
+
+  </div>
+</body>
+</html>
