@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>bind polyfill | ZKBOYS</title>
+  <title>react相关面试题 | ZKBOYS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="老版本浏览器可能不支持bind函数，这里做一个polyfill。12345678910111213141516if(!Function.prototype.bind)&amp;#123;    Function.prototype.bind = function(obj)&amp;#123;        var slice = [].slice,            //bind 函数是可以传参数的。比如：t">
-<meta name="keywords" content="polyfill">
+  <meta name="description" content="React state props 的理解，什么数据适合放入state中？ setState函数有几种参数形式？this.state无法立即获取setState设置的数据原因？ 组件间通信方式 react有几个周期函数，各个周期函数的作用是什么（适合写什么样的逻辑）？ diff算法？ React性能优化  代码规范 esLint？ esLint如何结合IDE、GIT使用？  Redux 为什么要使">
+<meta name="keywords" content="面试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bind polyfill">
-<meta property="og:url" content="http://zkboys.com/2017/03/02/bind-polyfill/index.html">
+<meta property="og:title" content="react相关面试题">
+<meta property="og:url" content="http://zkboys.com/2017/08/15/react相关面试题/index.html">
 <meta property="og:site_name" content="ZKBOYS">
-<meta property="og:description" content="老版本浏览器可能不支持bind函数，这里做一个polyfill。12345678910111213141516if(!Function.prototype.bind)&amp;#123;    Function.prototype.bind = function(obj)&amp;#123;        var slice = [].slice,            //bind 函数是可以传参数的。比如：t">
+<meta property="og:description" content="React state props 的理解，什么数据适合放入state中？ setState函数有几种参数形式？this.state无法立即获取setState设置的数据原因？ 组件间通信方式 react有几个周期函数，各个周期函数的作用是什么（适合写什么样的逻辑）？ diff算法？ React性能优化  代码规范 esLint？ esLint如何结合IDE、GIT使用？  Redux 为什么要使">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-03-02T07:26:44.000Z">
+<meta property="og:updated_time" content="2018-03-02T01:40:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bind polyfill">
-<meta name="twitter:description" content="老版本浏览器可能不支持bind函数，这里做一个polyfill。12345678910111213141516if(!Function.prototype.bind)&amp;#123;    Function.prototype.bind = function(obj)&amp;#123;        var slice = [].slice,            //bind 函数是可以传参数的。比如：t">
+<meta name="twitter:title" content="react相关面试题">
+<meta name="twitter:description" content="React state props 的理解，什么数据适合放入state中？ setState函数有几种参数形式？this.state无法立即获取setState设置的数据原因？ 组件间通信方式 react有几个周期函数，各个周期函数的作用是什么（适合写什么样的逻辑）？ diff算法？ React性能优化  代码规范 esLint？ esLint如何结合IDE、GIT使用？  Redux 为什么要使">
   
   
     <link rel="icon" href="/favicon.png">
@@ -81,14 +81,14 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-bind-polyfill" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-react相关面试题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/03/02/bind-polyfill/" class="article-date">
-  <time datetime="2017-03-02T07:25:16.000Z" itemprop="datePublished">2017-03-02</time>
+    <a href="/2017/08/15/react相关面试题/" class="article-date">
+  <time datetime="2017-08-15T01:29:29.000Z" itemprop="datePublished">2017-08-15</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>►<a class="article-category-link" href="/categories/前端/JS/">JS</a>
+    <a class="article-category-link" href="/categories/前端/">前端</a>
   </div>
 
   </div>
@@ -99,7 +99,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      bind polyfill
+      react相关面试题
     </h1>
   
 
@@ -108,15 +108,66 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        <p>老版本浏览器可能不支持bind函数，这里做一个polyfill。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(!<span class="built_in">Function</span>.prototype.bind)&#123;</span><br><span class="line">    <span class="built_in">Function</span>.prototype.bind = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> slice = [].slice,</span><br><span class="line">            <span class="comment">//bind 函数是可以传参数的。比如：this.click.bind(this,1,2,3)</span></span><br><span class="line">            args = slice.call(<span class="built_in">arguments</span>, <span class="number">1</span>),</span><br><span class="line">            self = <span class="keyword">this</span>,</span><br><span class="line">            nop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,</span><br><span class="line">            bound = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> self.apply(<span class="keyword">this</span> <span class="keyword">instanceof</span> nop ? <span class="keyword">this</span>:(obj||&#123;&#125;),</span><br><span class="line">                    args.concat(slice.call(<span class="built_in">arguments</span>)));</span><br><span class="line">            &#125;;</span><br><span class="line">        nop.prototype = self.prototype;</span><br><span class="line">        bound.prototype = <span class="keyword">new</span> nop();</span><br><span class="line">        <span class="keyword">return</span> bound;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h2 id="React"><a href="#React" class="headerlink" title="React"></a>React</h2><ol>
+<li>state props 的理解，什么数据适合放入state中？</li>
+<li>setState函数有几种参数形式？this.state无法立即获取setState设置的数据原因？</li>
+<li>组件间通信方式</li>
+<li>react有几个周期函数，各个周期函数的作用是什么（适合写什么样的逻辑）？</li>
+<li>diff算法？</li>
+<li>React性能优化</li>
+</ol>
+<h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><ol>
+<li>esLint？</li>
+<li>esLint如何结合IDE、GIT使用？</li>
+</ol>
+<h2 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h2><ol>
+<li>为什么要使用Redux，什么数据适合放入Redux中？</li>
+<li>Redux原理（如何实现的）？</li>
+</ol>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ol>
+<li>css预处理器</li>
+<li>css Module</li>
+</ol>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><ol>
+<li>let const 为什么不用var？</li>
+<li>箭头函数？</li>
+<li>解构赋值、函数的reset参数？</li>
+<li>函数式变成？</li>
+<li>class</li>
+<li>promise</li>
+<li>异步回调地狱解决方案</li>
+</ol>
+<h2 id="webpack"><a href="#webpack" class="headerlink" title="webpack"></a>webpack</h2><ol>
+<li>配置、常用插件</li>
+<li>命令行兼容性</li>
+<li>各种常见loader</li>
+<li>各个版本了解程度</li>
+</ol>
+<h2 id="react-router"><a href="#react-router" class="headerlink" title="react-router"></a>react-router</h2><ol>
+<li>配置文件过大，容易冲突，如何解决？</li>
+<li>hash、H5方式，用哪种？区别是什么？</li>
+</ol>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
+<li>组件化、模块化</li>
+<li>前后端分离</li>
+<li>GraphQL、restful</li>
+<li>HTTP Code</li>
+<li>组件卸载，ajax打断</li>
+<li>ajax、fetch封装，封装了什么？</li>
+<li>异常处理</li>
+<li>yarn vs npm</li>
+<li>异常处理、错误上报</li>
+<li>测试：e2e unit</li>
+<li>weex、RN、微信小程序</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/03/02/bind-polyfill/" data-id="cje99vpyd0021eo9fi82mt6n6" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/08/15/react相关面试题/" data-id="cje99vpzz004feo9f7slaza1q" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/polyfill/">polyfill</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
 
     </footer>
   </div>
@@ -124,19 +175,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/03/02/数组选出几个数相加等于固定值/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/02/27/cross-env/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          数组选出几个数相加等于固定值
+          cross-env
         
       </div>
     </a>
   
   
-    <a href="/2017/02/27/通过时间戳获取索引的一个有趣的算法题/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/08/09/前端与产品约定/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">通过时间戳获取索引的一个有趣的算法题</div>
+      <div class="article-nav-title">前端与产品约定</div>
     </a>
   
 </nav>
@@ -149,7 +200,7 @@
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2017/03/02/bind-polyfill/" data-title="bind polyfill" data-url="http://zkboys.com/2017/03/02/bind-polyfill/"></div>
+		<div class="ds-thread" data-thread-key="2017/08/15/react相关面试题/" data-title="react相关面试题" data-url="http://zkboys.com/2017/08/15/react相关面试题/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">
