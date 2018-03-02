@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>js 深克隆 | ZKBOYS</title>
+  <title>web打印 | ZKBOYS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="设计项目中可以使用如下封装或者使用第三方库的实现，比如loadsh  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657/*** javascript 深度克隆函数*/function deepClone(obj) &amp;#123;    va">
-<meta name="keywords" content="js">
+  <meta name="description" content="web打印window.print()直接打印 打印分页如果table 使用规范的结构,打印自动分页时,每一行都会有表头、表尾； 如果需要强制分页，通过添加空div.pageBreak，样式如下 123&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;　　.pageBreak&amp;#123; page-break-after:always;&amp;#125;&amp;lt;/style&amp;">
+<meta name="keywords" content="打印">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js 深克隆">
-<meta property="og:url" content="http://zkboys.com/2017/02/15/js-深克隆/index.html">
+<meta property="og:title" content="web打印">
+<meta property="og:url" content="http://zkboys.com/2017/07/12/web打印/index.html">
 <meta property="og:site_name" content="ZKBOYS">
-<meta property="og:description" content="设计项目中可以使用如下封装或者使用第三方库的实现，比如loadsh  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657/*** javascript 深度克隆函数*/function deepClone(obj) &amp;#123;    va">
+<meta property="og:description" content="web打印window.print()直接打印 打印分页如果table 使用规范的结构,打印自动分页时,每一行都会有表头、表尾； 如果需要强制分页，通过添加空div.pageBreak，样式如下 123&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;　　.pageBreak&amp;#123; page-break-after:always;&amp;#125;&amp;lt;/style&amp;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-02-15T02:52:13.000Z">
+<meta property="og:updated_time" content="2018-03-02T01:15:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js 深克隆">
-<meta name="twitter:description" content="设计项目中可以使用如下封装或者使用第三方库的实现，比如loadsh  123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657/*** javascript 深度克隆函数*/function deepClone(obj) &amp;#123;    va">
+<meta name="twitter:title" content="web打印">
+<meta name="twitter:description" content="web打印window.print()直接打印 打印分页如果table 使用规范的结构,打印自动分页时,每一行都会有表头、表尾； 如果需要强制分页，通过添加空div.pageBreak，样式如下 123&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;　　.pageBreak&amp;#123; page-break-after:always;&amp;#125;&amp;lt;/style&amp;">
   
   
     <link rel="icon" href="/favicon.png">
@@ -81,14 +81,14 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-js-深克隆" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-web打印" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/02/15/js-深克隆/" class="article-date">
-  <time datetime="2017-02-15T02:47:25.000Z" itemprop="datePublished">2017-02-15</time>
+    <a href="/2017/07/12/web打印/" class="article-date">
+  <time datetime="2017-07-12T01:14:25.000Z" itemprop="datePublished">2017-07-12</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>►<a class="article-category-link" href="/categories/前端/JS/">JS</a>
+    <a class="article-category-link" href="/categories/前端/">前端</a>
   </div>
 
   </div>
@@ -99,7 +99,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js 深克隆
+      web打印
     </h1>
   
 
@@ -108,16 +108,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        <p>设计项目中可以使用如下封装或者使用第三方库的实现，比如<a href="https://lodash.com/docs/4.17.4#cloneDeep" target="_blank" rel="noopener">loadsh</a> </p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* javascript 深度克隆函数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> _toString = <span class="built_in">Object</span>.prototype.toString;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// null, undefined, non-object, function</span></span><br><span class="line">    <span class="keyword">if</span> (!obj || <span class="keyword">typeof</span> obj !== <span class="string">'object'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// DOM Node</span></span><br><span class="line">    <span class="keyword">if</span> (obj.nodeType &amp;&amp; <span class="string">'cloneNode'</span> <span class="keyword">in</span> obj) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj.cloneNode(<span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Date</span></span><br><span class="line">    <span class="keyword">if</span> (_toString.call(obj) === <span class="string">'[object Date]'</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>(obj.getTime());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// RegExp</span></span><br><span class="line">    <span class="keyword">if</span> (_toString.call(obj) === <span class="string">'[object RegExp]'</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> flags = [];</span><br><span class="line">        <span class="keyword">if</span> (obj.global) &#123; flags.push(<span class="string">'g'</span>); &#125;</span><br><span class="line">        <span class="keyword">if</span> (obj.multiline) &#123; flags.push(<span class="string">'m'</span>); &#125;</span><br><span class="line">        <span class="keyword">if</span> (obj.ignoreCase) &#123; flags.push(<span class="string">'i'</span>); &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">RegExp</span>(obj.source, flags.join(<span class="string">''</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> result = <span class="built_in">Array</span>.isArray(obj) ? [] :</span><br><span class="line">        obj.constructor ? <span class="keyword">new</span> obj.constructor() : &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> obj ) &#123;</span><br><span class="line">        result[key] = deepClone(obj[key]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.a = a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = &#123;</span><br><span class="line">    name: <span class="string">'qiu'</span>,</span><br><span class="line">    birth: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">    pattern: <span class="regexp">/qiu/gim</span>,</span><br><span class="line">    container: <span class="built_in">document</span>.body,</span><br><span class="line">    hobbys: [<span class="string">'book'</span>, <span class="keyword">new</span> <span class="built_in">Date</span>(), /aaa/gim, <span class="number">111</span>]</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> A();</span><br><span class="line"><span class="keyword">var</span> b = deepClone(c);</span><br><span class="line"><span class="built_in">console</span>.log(c.a === b.a);</span><br><span class="line"><span class="built_in">console</span>.log(c, b);</span><br></pre></td></tr></table></figure>
+        <h1 id="web打印"><a href="#web打印" class="headerlink" title="web打印"></a>web打印</h1><p><code>window.print()</code>直接打印</p>
+<h2 id="打印分页"><a href="#打印分页" class="headerlink" title="打印分页"></a>打印分页</h2><p>如果table 使用规范的结构,打印自动分页时,每一行都会有表头、表尾；</p>
+<p>如果需要强制分页，通过添加空div.pageBreak，样式如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">　　.pageBreak&#123; page-break-after:always;&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="区分打印内容，不打印内容"><a href="#区分打印内容，不打印内容" class="headerlink" title="区分打印内容，不打印内容"></a>区分打印内容，不打印内容</h2><p>不需要打印的内容，但是页面需要显示，添加<code>no-print</code>class类；<br>需要打印的内容，但是页面不需要显示，添加<code>just-print</code>class类</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.just-print &#123;</span><br><span class="line">  display: none !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@media print &#123;</span><br><span class="line">  .no-print &#123;</span><br><span class="line">    display: none !important;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .just-print &#123;</span><br><span class="line">    display: block !important;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/15/js-深克隆/" data-id="cje98yxp0003bcd9fvc345zvf" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/07/12/web打印/" data-id="cje98yxq5005lcd9fw5hlwcbb" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/打印/">打印</a></li></ul>
 
     </footer>
   </div>
@@ -125,19 +129,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/02/15/JS判断是否是数组/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/28/nginx操作/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          JS判断是否是数组
+          nginx操作
         
       </div>
     </a>
   
   
-    <a href="/2017/02/09/nodejs-生成md5/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/06/02/关于组件化/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">nodejs 生成md5</div>
+      <div class="article-nav-title">关于组件化</div>
     </a>
   
 </nav>
@@ -150,7 +154,7 @@
 	
 	<section id="comment">
 		<!-- 多说评论框 start -->
-		<div class="ds-thread" data-thread-key="2017/02/15/js-深克隆/" data-title="js 深克隆" data-url="http://zkboys.com/2017/02/15/js-深克隆/"></div>
+		<div class="ds-thread" data-thread-key="2017/07/12/web打印/" data-title="web打印" data-url="http://zkboys.com/2017/07/12/web打印/"></div>
 		<!-- 多说评论框 end -->
 		<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 		<script type="text/javascript">
