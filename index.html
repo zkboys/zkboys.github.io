@@ -81,10 +81,73 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-cross-env" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/27/cross-env/" class="article-date">
+  <time datetime="2018-02-27T06:13:14.000Z" itemprop="datePublished">2018-02-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/工具/">工具</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/27/cross-env/">cross-env</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <blockquote>
+<p>不同平台命令有兼容性问题，可以通过一些第三方包解决</p>
+</blockquote>
+<h2 id="rimraf"><a href="#rimraf" class="headerlink" title="rimraf"></a><a href="https://www.npmjs.com/package/rimraf" target="_blank" rel="noopener">rimraf</a></h2><blockquote>
+<p>删除文件、文件夹</p>
+</blockquote>
+<h2 id="mkdirp"><a href="#mkdirp" class="headerlink" title="mkdirp"></a><a href="https://github.com/substack/node-mkdirp" target="_blank" rel="noopener">mkdirp</a></h2><blockquote>
+<p>创建文件夹</p>
+</blockquote>
+<h2 id="cross-env"><a href="#cross-env" class="headerlink" title="cross-env"></a><a href="https://www.npmjs.com/package/cross-env" target="_blank" rel="noopener">cross-env</a></h2><blockquote>
+<p>不同平台（window linux unix）命令行传递参数有兼容性问题，通过cross-env可以解决各个平台的兼容性问题</p>
+</blockquote>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ yarn add cross-env --dev</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">$ npm install cross-env --save-dev</span><br></pre></td></tr></table></figure>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// package.jsxon</span><br><span class="line">...</span><br><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;dev&quot;: &quot;cross-env NODE_ENV=development node ./builder/dev-server.js&quot;,</span><br><span class="line">  &#125;,</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p><code>NODE_ENV=development</code> 常用参数，构建工具以此区分不同的模式，开发模式（development 或 dev）还是生产环境（production 或 pro）；<br>具体需要什么 参数=值 以项目为准；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zkboys.com/2018/02/27/cross-env/" data-id="cje98tej60029b49fei5n1b1y" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cross-env/">cross-env</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+	
+
+
+
+  
     <article id="post-前端与产品约定" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/08/09/前端与产品约定/" class="article-date">
-  <time datetime="2018-08-09T01:08:43.000Z" itemprop="datePublished">2018-08-09</time>
+    <a href="/2017/08/09/前端与产品约定/" class="article-date">
+  <time datetime="2017-08-09T01:08:43.000Z" itemprop="datePublished">2017-08-09</time>
 </a>
     
   </div>
@@ -95,7 +158,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/09/前端与产品约定/">前端与产品约定</a>
+      <a class="article-title" href="/2017/08/09/前端与产品约定/">前端与产品约定</a>
     </h1>
   
 
@@ -142,7 +205,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2018/08/09/前端与产品约定/" data-id="cje98r9ov006ua09fx9741rsc" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/08/09/前端与产品约定/" data-id="cje98teln006ob49fp1h6wb62" class="article-share-link">Share</a>
       
       
     </footer>
@@ -157,10 +220,103 @@
 
 
   
+    <article id="post-nginx操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/28/nginx操作/" class="article-date">
+  <time datetime="2017-07-28T02:39:42.000Z" itemprop="datePublished">2017-07-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/后端/">后端</a>►<a class="article-category-link" href="/categories/后端/nginx/">nginx</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/28/nginx操作/">nginx操作</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h1 id="nginx-操作"><a href="#nginx-操作" class="headerlink" title="nginx 操作"></a>nginx 操作</h1><blockquote>
+<p>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nginx</span><br></pre></td></tr></table></figure>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">进入服务器nginx目录：cd /etc/nginx/</span><br><span class="line">执行：sudo nginx</span><br></pre></td></tr></table></figure>
+<h2 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef|grep nginx</span><br></pre></td></tr></table></figure>
+<h2 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h2><p>waiting for the worker processes to finish serving current requests<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s quit 或 sudo kill -s QUIT 1628（进程编号）</span><br></pre></td></tr></table></figure></p>
+<p>without waiting for the worker processes to finish serving current requests<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s stop</span><br></pre></td></tr></table></figure></p>
+<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><p>更改配置文件之后需要重启<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s reload</span><br></pre></td></tr></table></figure></p>
+<p>Once the master process receives the signal to reload configuration, it checks the syntax validity of the new configuration file and tries to apply the configuration provided in it. If this is a success, the master process starts new worker processes and sends messages to old worker processes, requesting them to shut down. Otherwise, the master process rolls back the changes and continues to work with the old configuration. Old worker processes, receiving a command to shut down, stop accepting new connections and continue to service current requests until all such requests are serviced. After that, the old worker processes exit.</p>
+<p>一旦主线程得到重启命令，它会先校验配置是否正确，如果正确，主线程会启动新的worker线程，关闭旧的worker线程。否则，主线程会回滚到原先的配置，旧的worker线程会得到一个shut down命令，停止接受新连接，但是会继续服务当前请求，当所有的请求处理完之后，会退出。</p>
+<p>官网这段话什么意思？如果配置错误，master会roll back，但是worker还是会exit？</p>
+<h2 id="pid文件丢失问题解决方法"><a href="#pid文件丢失问题解决方法" class="headerlink" title="pid文件丢失问题解决方法"></a>pid文件丢失问题解决方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wangshubin@pc:/etc/nginx$ sudo nginx -c /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+<h2 id="nginx-config配置"><a href="#nginx-config配置" class="headerlink" title="nginx.config配置"></a>nginx.config配置</h2><p>这个文件中的配置基本上是没动,只是添加两个include</p>
+<p>具体的配置在sites-enabled和sites-available中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">user wangshubin;</span><br><span class="line"></span><br><span class="line">worker_processes 4;</span><br><span class="line"></span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line"></span><br><span class="line">     worker_connections 768;</span><br><span class="line"></span><br><span class="line">     # multi_accept on;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Basic Settings</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     sendfile on;</span><br><span class="line"></span><br><span class="line">     tcp_nopush on;</span><br><span class="line"></span><br><span class="line">     tcp_nodelay on;</span><br><span class="line"></span><br><span class="line">     keepalive_timeout 65;</span><br><span class="line"></span><br><span class="line">     types_hash_max_size 2048;</span><br><span class="line"></span><br><span class="line">        client_max_body_size 10m;</span><br><span class="line"></span><br><span class="line">     # server_tokens off;</span><br><span class="line"></span><br><span class="line">     # server_names_hash_bucket_size 64;</span><br><span class="line"></span><br><span class="line">     # server_name_in_redirect off;</span><br><span class="line"></span><br><span class="line">     include /etc/nginx/mime.types;</span><br><span class="line"></span><br><span class="line">     default_type application/octet-stream;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Logging Settings</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     access_log /var/log/nginx/access.log;</span><br><span class="line"></span><br><span class="line">     error_log /var/log/nginx/error.log;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Gzip Settings</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     gzip on;</span><br><span class="line"></span><br><span class="line">     gzip_disable &quot;msie6&quot;;</span><br><span class="line"></span><br><span class="line">     # gzip_vary on;</span><br><span class="line"></span><br><span class="line">     # gzip_proxied any;</span><br><span class="line"></span><br><span class="line">     # gzip_comp_level 6;</span><br><span class="line"></span><br><span class="line">     # gzip_buffers 16 8k;</span><br><span class="line"></span><br><span class="line">     # gzip_http_version 1.1;</span><br><span class="line"></span><br><span class="line">     # gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # nginx-naxsi config</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Uncomment it if you installed nginx-naxsi</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     #include /etc/nginx/naxsi_core.rules;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # nginx-passenger config</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Uncomment it if you installed nginx-passenger</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     #passenger_root /usr;</span><br><span class="line"></span><br><span class="line">     #passenger_ruby /usr/bin/ruby;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Virtual Host Configs</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     include /etc/nginx/conf.d/*.conf;</span><br><span class="line"></span><br><span class="line">     include /etc/nginx/sites-enabled/*;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#mail &#123;</span><br><span class="line"></span><br><span class="line">#     # See sample authentication script at:</span><br><span class="line"></span><br><span class="line">#     # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript</span><br><span class="line"></span><br><span class="line">#</span><br><span class="line"></span><br><span class="line">#     # auth_http localhost/auth.php;</span><br><span class="line"></span><br><span class="line">#     # pop3_capabilities &quot;TOP&quot; &quot;USER&quot;;</span><br><span class="line"></span><br><span class="line">#     # imap_capabilities &quot;IMAP4rev1&quot; &quot;UIDPLUS&quot;;</span><br><span class="line"></span><br><span class="line">#</span><br><span class="line"></span><br><span class="line">#     server &#123;</span><br><span class="line"></span><br><span class="line">#          listen     localhost:110;</span><br><span class="line"></span><br><span class="line">#          protocol   pop3;</span><br><span class="line"></span><br><span class="line">#          proxy      on;</span><br><span class="line"></span><br><span class="line">#     &#125;</span><br><span class="line"></span><br><span class="line">#</span><br><span class="line"></span><br><span class="line">#     server &#123;</span><br><span class="line"></span><br><span class="line">#          listen     localhost:143;</span><br><span class="line"></span><br><span class="line">#          protocol   imap;</span><br><span class="line"></span><br><span class="line">#          proxy      on;</span><br><span class="line"></span><br><span class="line">#     &#125;</span><br><span class="line"></span><br><span class="line">#&#125;</span><br></pre></td></tr></table></figure></p>
+<p>sites-available文件夹中，inc.eking99.com文件中的内容<br>sites-enabled文件夹中保存的文件就是sites-available其中的文件<br>sites-enabled表明sites-available中哪个”网站”是激活状态<br>sites-enabled中的文件会删除,或者从sites-available中拷贝过来,是一个软链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># Enumerate all the Tornado servers here</span><br><span class="line"></span><br><span class="line">upstream inc_eking_tornadoes &#123;</span><br><span class="line"></span><br><span class="line">    server 127.0.0.1:8081;</span><br><span class="line"></span><br><span class="line">    server 127.0.0.1:8082;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">proxy_next_upstream error;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line"></span><br><span class="line">    listen 80;</span><br><span class="line"></span><br><span class="line">    server_name inc.eking99.com;</span><br><span class="line"></span><br><span class="line">    # Allow file uploads</span><br><span class="line"></span><br><span class="line">    client_max_body_size 100M;</span><br><span class="line"></span><br><span class="line">    location ^~ /s/ &#123;</span><br><span class="line"></span><br><span class="line">        alias /home/admin/deploy/inc-eking-web/public/;</span><br><span class="line"></span><br><span class="line">        if ($query_string) &#123;</span><br><span class="line"></span><br><span class="line">            expires max;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #location = /favicon.ico &#123;</span><br><span class="line"></span><br><span class="line">    #    rewrite (.*) /s/favicon.ico;</span><br><span class="line"></span><br><span class="line">    #&#125;</span><br><span class="line"></span><br><span class="line">    #location = /robots.txt &#123;</span><br><span class="line"></span><br><span class="line">    #    rewrite (.*) /s/robots.txt;</span><br><span class="line"></span><br><span class="line">    #&#125;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line"></span><br><span class="line">        proxy_read_timeout 1800;</span><br><span class="line"></span><br><span class="line">        proxy_pass_header Server;</span><br><span class="line"></span><br><span class="line">        proxy_set_header Host $http_host;</span><br><span class="line"></span><br><span class="line">        proxy_redirect false;</span><br><span class="line"></span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line"></span><br><span class="line">        proxy_set_header X-Scheme $scheme;</span><br><span class="line"></span><br><span class="line">        proxy_pass http://inc_eking_tornadoes;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="nginxWebSocket配置"><a href="#nginxWebSocket配置" class="headerlink" title="nginxWebSocket配置"></a>nginxWebSocket配置</h2><p>两种方式</p>
+<ol>
+<li><p>修改nginx.config:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">map $http_upgrade $connection_upgrade&#123;</span><br><span class="line">     default upgrade;</span><br><span class="line">     &quot;&quot; close;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  具体网站配置文件：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">proxy_http_version 1.1;</span><br><span class="line">proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">proxy_set_header Connection &quot;upgrade&quot;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将这两个配置都写到具体网站配置文件中。（将map…放到server配置上面）</p>
+</li>
+</ol>
+<h2 id="平时处理nginx用到的一些东西："><a href="#平时处理nginx用到的一些东西：" class="headerlink" title="平时处理nginx用到的一些东西："></a>平时处理nginx用到的一些东西：</h2><p>一、具体用法</p>
+<pre><code>ln -s 源文件 目标文件
+
+当我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在某个固定的目录，放上该文件，然后在其它的目录下用ln命令链接（link）它就可以，不必重复的占用磁盘空间，只生成目标文件的一个镜像。
+
+例如：ln -s /tmp/less /usr/local/bin/less
+</code></pre><p>二、注意：</p>
+<pre><code>（1）ln命令会保持你每一处连接文件的同步性，不论更改源文件还是目标文件，另一处文件也会有相 同的改动。
+
+（2）ln命令分为软连接和硬链接（无参数-s）。与软连接不同的是，硬链接会在你选定的位置上生成一个与原来文件大小相同的文件。无论是软连接还是硬链接都具有文件的同步性。
+
+（3）当一个存储空间，具有几个硬链接时，删除其中的一个，并不会对存储空间进行操作，所以其它的硬链接不会受到影响。
+
+（4）ln默认时间里硬链接（无参数-s）。
+</code></pre><h2 id="原先-www-eking99-com-nginx配置："><a href="#原先-www-eking99-com-nginx配置：" class="headerlink" title="原先 www.eking99.com nginx配置："></a>原先 <a href="http://www.eking99.com" target="_blank" rel="noopener">www.eking99.com</a> nginx配置：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80 default_server;</span><br><span class="line">    listen [::]:80 default_server ipv6only=on;</span><br><span class="line"></span><br><span class="line">    root /home/admin/deploy/www-eking99-web;</span><br><span class="line">    index index.html index.htm;</span><br><span class="line"></span><br><span class="line">    server_name www.eking99.com;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name eking.mobi www.eking.mobi eking.umail.cn;</span><br><span class="line">    rewrite ^/(.*) http://www.eking99.com/$1 permanent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="原www-eking-com-nginx配置："><a href="#原www-eking-com-nginx配置：" class="headerlink" title="原www.eking.com nginx配置："></a>原<a href="http://www.eking.com" target="_blank" rel="noopener">www.eking.com</a> nginx配置：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#all the Tornado servers here</span><br><span class="line">upstream www_eking99_tornadoes &#123;</span><br><span class="line">    server 127.0.0.1:9090;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">proxy_next_upstream error;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name www.eking99.com eking99.com</span><br><span class="line">    # Allow file uploads</span><br><span class="line">    client_max_body_size 15M;</span><br><span class="line"></span><br><span class="line">    location ^~ /s/ &#123;</span><br><span class="line">        alias /home/admin/deploy/www-eking-web/public/;</span><br><span class="line">        if ($query_string) &#123;</span><br><span class="line">            expires max;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location = /favicon.ico &#123;</span><br><span class="line">        rewrite (.*) /s/favicon.ico;</span><br><span class="line">    &#125;</span><br><span class="line">    location = /robots.txt &#123;</span><br><span class="line">        rewrite (.*) /s/robots.txt;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass_header Server;</span><br><span class="line">        proxy_set_header Host $http_host;</span><br><span class="line">        proxy_redirect off; #老版本是false</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Scheme $scheme;</span><br><span class="line">        proxy_pass http://www_eking99_tornadoes;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="一般服务器nginx位置："><a href="#一般服务器nginx位置：" class="headerlink" title="一般服务器nginx位置："></a>一般服务器nginx位置：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/nginx</span><br><span class="line">sites-available为可用配置，但是不是实际跑的配置</span><br><span class="line">sites-enable 为当前启用的配置，是sites-available的软连接</span><br></pre></td></tr></table></figure>
+<h3 id="nginx目录中文件及其作用："><a href="#nginx目录中文件及其作用：" class="headerlink" title="nginx目录中文件及其作用："></a>nginx目录中文件及其作用：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">conf.d</span><br><span class="line"></span><br><span class="line">mime.types</span><br><span class="line"></span><br><span class="line">nginx.conf</span><br><span class="line"></span><br><span class="line">sites-enabled</span><br><span class="line"></span><br><span class="line">fastcgi_params</span><br><span class="line"></span><br><span class="line">naxsi_core.rules</span><br><span class="line"></span><br><span class="line">proxy_params</span><br><span class="line"></span><br><span class="line">uwsgi_params</span><br><span class="line"></span><br><span class="line">koi-utf</span><br><span class="line"></span><br><span class="line">naxsi.rules</span><br><span class="line"></span><br><span class="line">scgi_params</span><br><span class="line"></span><br><span class="line">win-utf</span><br><span class="line"></span><br><span class="line">koi-win</span><br><span class="line"></span><br><span class="line">naxsi-ui.conf.1.4.1</span><br><span class="line"></span><br><span class="line">sites-available</span><br></pre></td></tr></table></figure>
+<h2 id="前后端分离-ngnix配置："><a href="#前后端分离-ngnix配置：" class="headerlink" title="前后端分离 ngnix配置："></a>前后端分离 ngnix配置：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 服务地址</span><br><span class="line">upstream api_service &#123;</span><br><span class="line">  server localhost:8080;</span><br><span class="line">  keepalive 2000;</span><br><span class="line">&#125;</span><br><span class="line">#</span><br><span class="line">server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  localhost;</span><br><span class="line">        location / &#123;</span><br><span class="line">          root /home/app/nginx/html;</span><br><span class="line">          index index.html;</span><br><span class="line">          try_files $uri $uri/ /index.html; #react-router 防止页面刷新出现404</span><br><span class="line">        &#125;</span><br><span class="line">        location ^~/api &#123; // 代理ajax请求，前端的ajax请求配置了统一的baseUrl = ‘/api’</span><br><span class="line">           proxy_pass http://api_service/;</span><br><span class="line">           proxy_set_header Host  $http_host;</span><br><span class="line">           proxy_set_header Connection close;</span><br><span class="line">           proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">           proxy_set_header X-Forwarded-Server $host;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zkboys.com/2017/07/28/nginx操作/" data-id="cje98teko004gb49f30j8f4hu" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+	
+
+
+
+  
     <article id="post-关于组件化" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/06/02/关于组件化/" class="article-date">
-  <time datetime="2018-06-02T01:07:51.000Z" itemprop="datePublished">2018-06-02</time>
+    <a href="/2017/06/02/关于组件化/" class="article-date">
+  <time datetime="2017-06-02T01:07:51.000Z" itemprop="datePublished">2017-06-02</time>
 </a>
     
   <div class="article-category">
@@ -175,7 +331,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/02/关于组件化/">关于组件化</a>
+      <a class="article-title" href="/2017/06/02/关于组件化/">关于组件化</a>
     </h1>
   
 
@@ -273,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2018/06/02/关于组件化/" data-id="cje98r9on006ca09f0hgtdhme" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/06/02/关于组件化/" data-id="cje98telh0068b49fz5zr4069" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/最佳实践/">最佳实践</a></li></ul>
@@ -292,8 +448,8 @@
   
     <article id="post-前端leader工作任务" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/05/22/前端leader工作任务/" class="article-date">
-  <time datetime="2018-05-22T01:07:14.000Z" itemprop="datePublished">2018-05-22</time>
+    <a href="/2017/05/22/前端leader工作任务/" class="article-date">
+  <time datetime="2017-05-22T01:07:14.000Z" itemprop="datePublished">2017-05-22</time>
 </a>
     
   <div class="article-category">
@@ -308,7 +464,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/22/前端leader工作任务/">前端leader工作任务</a>
+      <a class="article-title" href="/2017/05/22/前端leader工作任务/">前端leader工作任务</a>
     </h1>
   
 
@@ -341,166 +497,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2018/05/22/前端leader工作任务/" data-id="cje98r9ou006qa09ft3bupcnk" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/05/22/前端leader工作任务/" data-id="cje98tell006jb49f4jf1fh4f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/最佳实践/">最佳实践</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-	
-
-
-
-  
-    <article id="post-cross-env" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/02/27/cross-env/" class="article-date">
-  <time datetime="2018-02-27T06:13:14.000Z" itemprop="datePublished">2018-02-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/工具/">工具</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/27/cross-env/">cross-env</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <blockquote>
-<p>不同平台命令有兼容性问题，可以通过一些第三方包解决</p>
-</blockquote>
-<h2 id="rimraf"><a href="#rimraf" class="headerlink" title="rimraf"></a><a href="https://www.npmjs.com/package/rimraf" target="_blank" rel="noopener">rimraf</a></h2><blockquote>
-<p>删除文件、文件夹</p>
-</blockquote>
-<h2 id="mkdirp"><a href="#mkdirp" class="headerlink" title="mkdirp"></a><a href="https://github.com/substack/node-mkdirp" target="_blank" rel="noopener">mkdirp</a></h2><blockquote>
-<p>创建文件夹</p>
-</blockquote>
-<h2 id="cross-env"><a href="#cross-env" class="headerlink" title="cross-env"></a><a href="https://www.npmjs.com/package/cross-env" target="_blank" rel="noopener">cross-env</a></h2><blockquote>
-<p>不同平台（window linux unix）命令行传递参数有兼容性问题，通过cross-env可以解决各个平台的兼容性问题</p>
-</blockquote>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ yarn add cross-env --dev</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">$ npm install cross-env --save-dev</span><br></pre></td></tr></table></figure>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// package.jsxon</span><br><span class="line">...</span><br><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;dev&quot;: &quot;cross-env NODE_ENV=development node ./builder/dev-server.js&quot;,</span><br><span class="line">  &#125;,</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-<p><code>NODE_ENV=development</code> 常用参数，构建工具以此区分不同的模式，开发模式（development 或 dev）还是生产环境（production 或 pro）；<br>具体需要什么 参数=值 以项目为准；</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://zkboys.com/2018/02/27/cross-env/" data-id="cje98r9mv002ga09f32d741ai" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cross-env/">cross-env</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-	
-
-
-
-  
-    <article id="post-nginx操作" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/28/nginx操作/" class="article-date">
-  <time datetime="2017-07-28T02:39:42.000Z" itemprop="datePublished">2017-07-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/后端/">后端</a>►<a class="article-category-link" href="/categories/后端/nginx/">nginx</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/28/nginx操作/">nginx操作</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <h1 id="nginx-操作"><a href="#nginx-操作" class="headerlink" title="nginx 操作"></a>nginx 操作</h1><blockquote>
-<p>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。</p>
-</blockquote>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nginx</span><br></pre></td></tr></table></figure>
-<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">进入服务器nginx目录：cd /etc/nginx/</span><br><span class="line">执行：sudo nginx</span><br></pre></td></tr></table></figure>
-<h2 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef|grep nginx</span><br></pre></td></tr></table></figure>
-<h2 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h2><p>waiting for the worker processes to finish serving current requests<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s quit 或 sudo kill -s QUIT 1628（进程编号）</span><br></pre></td></tr></table></figure></p>
-<p>without waiting for the worker processes to finish serving current requests<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s stop</span><br></pre></td></tr></table></figure></p>
-<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><p>更改配置文件之后需要重启<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx -s reload</span><br></pre></td></tr></table></figure></p>
-<p>Once the master process receives the signal to reload configuration, it checks the syntax validity of the new configuration file and tries to apply the configuration provided in it. If this is a success, the master process starts new worker processes and sends messages to old worker processes, requesting them to shut down. Otherwise, the master process rolls back the changes and continues to work with the old configuration. Old worker processes, receiving a command to shut down, stop accepting new connections and continue to service current requests until all such requests are serviced. After that, the old worker processes exit.</p>
-<p>一旦主线程得到重启命令，它会先校验配置是否正确，如果正确，主线程会启动新的worker线程，关闭旧的worker线程。否则，主线程会回滚到原先的配置，旧的worker线程会得到一个shut down命令，停止接受新连接，但是会继续服务当前请求，当所有的请求处理完之后，会退出。</p>
-<p>官网这段话什么意思？如果配置错误，master会roll back，但是worker还是会exit？</p>
-<h2 id="pid文件丢失问题解决方法"><a href="#pid文件丢失问题解决方法" class="headerlink" title="pid文件丢失问题解决方法"></a>pid文件丢失问题解决方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wangshubin@pc:/etc/nginx$ sudo nginx -c /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
-<h2 id="nginx-config配置"><a href="#nginx-config配置" class="headerlink" title="nginx.config配置"></a>nginx.config配置</h2><p>这个文件中的配置基本上是没动,只是添加两个include</p>
-<p>具体的配置在sites-enabled和sites-available中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">user wangshubin;</span><br><span class="line"></span><br><span class="line">worker_processes 4;</span><br><span class="line"></span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line"></span><br><span class="line">     worker_connections 768;</span><br><span class="line"></span><br><span class="line">     # multi_accept on;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Basic Settings</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     sendfile on;</span><br><span class="line"></span><br><span class="line">     tcp_nopush on;</span><br><span class="line"></span><br><span class="line">     tcp_nodelay on;</span><br><span class="line"></span><br><span class="line">     keepalive_timeout 65;</span><br><span class="line"></span><br><span class="line">     types_hash_max_size 2048;</span><br><span class="line"></span><br><span class="line">        client_max_body_size 10m;</span><br><span class="line"></span><br><span class="line">     # server_tokens off;</span><br><span class="line"></span><br><span class="line">     # server_names_hash_bucket_size 64;</span><br><span class="line"></span><br><span class="line">     # server_name_in_redirect off;</span><br><span class="line"></span><br><span class="line">     include /etc/nginx/mime.types;</span><br><span class="line"></span><br><span class="line">     default_type application/octet-stream;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Logging Settings</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     access_log /var/log/nginx/access.log;</span><br><span class="line"></span><br><span class="line">     error_log /var/log/nginx/error.log;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Gzip Settings</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     gzip on;</span><br><span class="line"></span><br><span class="line">     gzip_disable &quot;msie6&quot;;</span><br><span class="line"></span><br><span class="line">     # gzip_vary on;</span><br><span class="line"></span><br><span class="line">     # gzip_proxied any;</span><br><span class="line"></span><br><span class="line">     # gzip_comp_level 6;</span><br><span class="line"></span><br><span class="line">     # gzip_buffers 16 8k;</span><br><span class="line"></span><br><span class="line">     # gzip_http_version 1.1;</span><br><span class="line"></span><br><span class="line">     # gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # nginx-naxsi config</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Uncomment it if you installed nginx-naxsi</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     #include /etc/nginx/naxsi_core.rules;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # nginx-passenger config</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Uncomment it if you installed nginx-passenger</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     #passenger_root /usr;</span><br><span class="line"></span><br><span class="line">     #passenger_ruby /usr/bin/ruby;</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     # Virtual Host Configs</span><br><span class="line"></span><br><span class="line">     ##</span><br><span class="line"></span><br><span class="line">     include /etc/nginx/conf.d/*.conf;</span><br><span class="line"></span><br><span class="line">     include /etc/nginx/sites-enabled/*;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#mail &#123;</span><br><span class="line"></span><br><span class="line">#     # See sample authentication script at:</span><br><span class="line"></span><br><span class="line">#     # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript</span><br><span class="line"></span><br><span class="line">#</span><br><span class="line"></span><br><span class="line">#     # auth_http localhost/auth.php;</span><br><span class="line"></span><br><span class="line">#     # pop3_capabilities &quot;TOP&quot; &quot;USER&quot;;</span><br><span class="line"></span><br><span class="line">#     # imap_capabilities &quot;IMAP4rev1&quot; &quot;UIDPLUS&quot;;</span><br><span class="line"></span><br><span class="line">#</span><br><span class="line"></span><br><span class="line">#     server &#123;</span><br><span class="line"></span><br><span class="line">#          listen     localhost:110;</span><br><span class="line"></span><br><span class="line">#          protocol   pop3;</span><br><span class="line"></span><br><span class="line">#          proxy      on;</span><br><span class="line"></span><br><span class="line">#     &#125;</span><br><span class="line"></span><br><span class="line">#</span><br><span class="line"></span><br><span class="line">#     server &#123;</span><br><span class="line"></span><br><span class="line">#          listen     localhost:143;</span><br><span class="line"></span><br><span class="line">#          protocol   imap;</span><br><span class="line"></span><br><span class="line">#          proxy      on;</span><br><span class="line"></span><br><span class="line">#     &#125;</span><br><span class="line"></span><br><span class="line">#&#125;</span><br></pre></td></tr></table></figure></p>
-<p>sites-available文件夹中，inc.eking99.com文件中的内容<br>sites-enabled文件夹中保存的文件就是sites-available其中的文件<br>sites-enabled表明sites-available中哪个”网站”是激活状态<br>sites-enabled中的文件会删除,或者从sites-available中拷贝过来,是一个软链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># Enumerate all the Tornado servers here</span><br><span class="line"></span><br><span class="line">upstream inc_eking_tornadoes &#123;</span><br><span class="line"></span><br><span class="line">    server 127.0.0.1:8081;</span><br><span class="line"></span><br><span class="line">    server 127.0.0.1:8082;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">proxy_next_upstream error;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line"></span><br><span class="line">    listen 80;</span><br><span class="line"></span><br><span class="line">    server_name inc.eking99.com;</span><br><span class="line"></span><br><span class="line">    # Allow file uploads</span><br><span class="line"></span><br><span class="line">    client_max_body_size 100M;</span><br><span class="line"></span><br><span class="line">    location ^~ /s/ &#123;</span><br><span class="line"></span><br><span class="line">        alias /home/admin/deploy/inc-eking-web/public/;</span><br><span class="line"></span><br><span class="line">        if ($query_string) &#123;</span><br><span class="line"></span><br><span class="line">            expires max;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #location = /favicon.ico &#123;</span><br><span class="line"></span><br><span class="line">    #    rewrite (.*) /s/favicon.ico;</span><br><span class="line"></span><br><span class="line">    #&#125;</span><br><span class="line"></span><br><span class="line">    #location = /robots.txt &#123;</span><br><span class="line"></span><br><span class="line">    #    rewrite (.*) /s/robots.txt;</span><br><span class="line"></span><br><span class="line">    #&#125;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line"></span><br><span class="line">        proxy_read_timeout 1800;</span><br><span class="line"></span><br><span class="line">        proxy_pass_header Server;</span><br><span class="line"></span><br><span class="line">        proxy_set_header Host $http_host;</span><br><span class="line"></span><br><span class="line">        proxy_redirect false;</span><br><span class="line"></span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line"></span><br><span class="line">        proxy_set_header X-Scheme $scheme;</span><br><span class="line"></span><br><span class="line">        proxy_pass http://inc_eking_tornadoes;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="nginxWebSocket配置"><a href="#nginxWebSocket配置" class="headerlink" title="nginxWebSocket配置"></a>nginxWebSocket配置</h2><p>两种方式</p>
-<ol>
-<li><p>修改nginx.config:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">map $http_upgrade $connection_upgrade&#123;</span><br><span class="line">     default upgrade;</span><br><span class="line">     &quot;&quot; close;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  具体网站配置文件：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">proxy_http_version 1.1;</span><br><span class="line">proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">proxy_set_header Connection &quot;upgrade&quot;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将这两个配置都写到具体网站配置文件中。（将map…放到server配置上面）</p>
-</li>
-</ol>
-<h2 id="平时处理nginx用到的一些东西："><a href="#平时处理nginx用到的一些东西：" class="headerlink" title="平时处理nginx用到的一些东西："></a>平时处理nginx用到的一些东西：</h2><p>一、具体用法</p>
-<pre><code>ln -s 源文件 目标文件
-
-当我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在某个固定的目录，放上该文件，然后在其它的目录下用ln命令链接（link）它就可以，不必重复的占用磁盘空间，只生成目标文件的一个镜像。
-
-例如：ln -s /tmp/less /usr/local/bin/less
-</code></pre><p>二、注意：</p>
-<pre><code>（1）ln命令会保持你每一处连接文件的同步性，不论更改源文件还是目标文件，另一处文件也会有相 同的改动。
-
-（2）ln命令分为软连接和硬链接（无参数-s）。与软连接不同的是，硬链接会在你选定的位置上生成一个与原来文件大小相同的文件。无论是软连接还是硬链接都具有文件的同步性。
-
-（3）当一个存储空间，具有几个硬链接时，删除其中的一个，并不会对存储空间进行操作，所以其它的硬链接不会受到影响。
-
-（4）ln默认时间里硬链接（无参数-s）。
-</code></pre><h2 id="原先-www-eking99-com-nginx配置："><a href="#原先-www-eking99-com-nginx配置：" class="headerlink" title="原先 www.eking99.com nginx配置："></a>原先 <a href="http://www.eking99.com" target="_blank" rel="noopener">www.eking99.com</a> nginx配置：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80 default_server;</span><br><span class="line">    listen [::]:80 default_server ipv6only=on;</span><br><span class="line"></span><br><span class="line">    root /home/admin/deploy/www-eking99-web;</span><br><span class="line">    index index.html index.htm;</span><br><span class="line"></span><br><span class="line">    server_name www.eking99.com;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name eking.mobi www.eking.mobi eking.umail.cn;</span><br><span class="line">    rewrite ^/(.*) http://www.eking99.com/$1 permanent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="原www-eking-com-nginx配置："><a href="#原www-eking-com-nginx配置：" class="headerlink" title="原www.eking.com nginx配置："></a>原<a href="http://www.eking.com" target="_blank" rel="noopener">www.eking.com</a> nginx配置：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#all the Tornado servers here</span><br><span class="line">upstream www_eking99_tornadoes &#123;</span><br><span class="line">    server 127.0.0.1:9090;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">proxy_next_upstream error;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name www.eking99.com eking99.com</span><br><span class="line">    # Allow file uploads</span><br><span class="line">    client_max_body_size 15M;</span><br><span class="line"></span><br><span class="line">    location ^~ /s/ &#123;</span><br><span class="line">        alias /home/admin/deploy/www-eking-web/public/;</span><br><span class="line">        if ($query_string) &#123;</span><br><span class="line">            expires max;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location = /favicon.ico &#123;</span><br><span class="line">        rewrite (.*) /s/favicon.ico;</span><br><span class="line">    &#125;</span><br><span class="line">    location = /robots.txt &#123;</span><br><span class="line">        rewrite (.*) /s/robots.txt;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass_header Server;</span><br><span class="line">        proxy_set_header Host $http_host;</span><br><span class="line">        proxy_redirect off; #老版本是false</span><br><span class="line">        proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header X-Scheme $scheme;</span><br><span class="line">        proxy_pass http://www_eking99_tornadoes;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="一般服务器nginx位置："><a href="#一般服务器nginx位置：" class="headerlink" title="一般服务器nginx位置："></a>一般服务器nginx位置：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/nginx</span><br><span class="line">sites-available为可用配置，但是不是实际跑的配置</span><br><span class="line">sites-enable 为当前启用的配置，是sites-available的软连接</span><br></pre></td></tr></table></figure>
-<h3 id="nginx目录中文件及其作用："><a href="#nginx目录中文件及其作用：" class="headerlink" title="nginx目录中文件及其作用："></a>nginx目录中文件及其作用：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">conf.d</span><br><span class="line"></span><br><span class="line">mime.types</span><br><span class="line"></span><br><span class="line">nginx.conf</span><br><span class="line"></span><br><span class="line">sites-enabled</span><br><span class="line"></span><br><span class="line">fastcgi_params</span><br><span class="line"></span><br><span class="line">naxsi_core.rules</span><br><span class="line"></span><br><span class="line">proxy_params</span><br><span class="line"></span><br><span class="line">uwsgi_params</span><br><span class="line"></span><br><span class="line">koi-utf</span><br><span class="line"></span><br><span class="line">naxsi.rules</span><br><span class="line"></span><br><span class="line">scgi_params</span><br><span class="line"></span><br><span class="line">win-utf</span><br><span class="line"></span><br><span class="line">koi-win</span><br><span class="line"></span><br><span class="line">naxsi-ui.conf.1.4.1</span><br><span class="line"></span><br><span class="line">sites-available</span><br></pre></td></tr></table></figure>
-<h2 id="前后端分离-ngnix配置："><a href="#前后端分离-ngnix配置：" class="headerlink" title="前后端分离 ngnix配置："></a>前后端分离 ngnix配置：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 服务地址</span><br><span class="line">upstream api_service &#123;</span><br><span class="line">  server localhost:8080;</span><br><span class="line">  keepalive 2000;</span><br><span class="line">&#125;</span><br><span class="line">#</span><br><span class="line">server &#123;</span><br><span class="line">        listen       80;</span><br><span class="line">        server_name  localhost;</span><br><span class="line">        location / &#123;</span><br><span class="line">          root /home/app/nginx/html;</span><br><span class="line">          index index.html;</span><br><span class="line">          try_files $uri $uri/ /index.html; #react-router 防止页面刷新出现404</span><br><span class="line">        &#125;</span><br><span class="line">        location ^~/api &#123; // 代理ajax请求，前端的ajax请求配置了统一的baseUrl = ‘/api’</span><br><span class="line">           proxy_pass http://api_service/;</span><br><span class="line">           proxy_set_header Host  $http_host;</span><br><span class="line">           proxy_set_header Connection close;</span><br><span class="line">           proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">           proxy_set_header X-Forwarded-Server $host;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/07/28/nginx操作/" data-id="cje98r9nx004va09f8hik36e0" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
 
     </footer>
   </div>
@@ -673,7 +673,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/05/05/前后端分离开发约定/" data-id="cje98r9os006na09freq6ff0f" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/05/05/前后端分离开发约定/" data-id="cje98telk006fb49fw1rvtu0d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/最佳实践/">最佳实践</a></li></ul>
@@ -797,7 +797,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/04/12/前端最佳实践/" data-id="cje98r9oy0074a09fmxsc4h7i" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/04/12/前端最佳实践/" data-id="cje98telr006zb49fs3h0qgvw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/最佳实践/">最佳实践</a></li></ul>
@@ -867,7 +867,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/04/02/GraphQL/" data-id="cje98r9lf0001a09f0pq4igih" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/04/02/GraphQL/" data-id="cje98tehm0004b49fayba6nkg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GraphQL/">GraphQL</a></li></ul>
@@ -941,7 +941,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/03/29/git-tag/" data-id="cje98r9n0002ra09fm71zu890" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/03/29/git-tag/" data-id="cje98tejh002ob49fpyk47spj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -991,7 +991,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/03/02/数组选出几个数相加等于固定值/" data-id="cje98r9p6007pa09fz0he6ta0" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/03/02/数组选出几个数相加等于固定值/" data-id="cje98telx007cb49f6gdkjwsi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
@@ -1040,7 +1040,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/03/02/bind-polyfill/" data-id="cje98r9mr0029a09f38aju7fj" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/03/02/bind-polyfill/" data-id="cje98tej20022b49fjritg6ar" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/polyfill/">polyfill</a></li></ul>
@@ -1090,7 +1090,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/27/通过时间戳获取索引的一个有趣的算法题/" data-id="cje98r9pg008ea09fk12qk546" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/02/27/通过时间戳获取索引的一个有趣的算法题/" data-id="cje98tem80083b49fv81hpq9d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
@@ -1140,7 +1140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/17/Vue2-0-跨组件事件/" data-id="cje98r9mo0021a09fbunfde68" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/02/17/Vue2-0-跨组件事件/" data-id="cje98teiw001sb49fucktxfho" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li></ul>
@@ -1189,7 +1189,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/15/JS获取窗滚动条位置/" data-id="cje98r9m5000va09fp8aypyyg" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/02/15/JS获取窗滚动条位置/" data-id="cje98teib000rb49fa8470xh0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -1238,7 +1238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/15/JS获取窗口尺寸/" data-id="cje98r9m4000ta09f8mjcze8j" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/02/15/JS获取窗口尺寸/" data-id="cje98tei9000pb49fbvqexuaq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -1287,7 +1287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/15/JS解析query-string/" data-id="cje98r9m7000za09ffc37wp39" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/02/15/JS解析query-string/" data-id="cje98teid000wb49fedayd5i9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -1336,7 +1336,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/15/JS判断是否是函数/" data-id="cje98r9lz000ha09fvq407sko" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/02/15/JS判断是否是函数/" data-id="cje98tei5000gb49fpoqda07f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -1385,7 +1385,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/15/JS时间监听器/" data-id="cje98r9m2000pa09f7dduyao7" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/02/15/JS时间监听器/" data-id="cje98tei8000lb49f7xousk39" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -1435,7 +1435,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/15/JS判断是否是数组/" data-id="cje98r9m1000ma09fsbk2767p" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/02/15/JS判断是否是数组/" data-id="cje98tei6000jb49fyc6wm7vj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -1485,7 +1485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/15/js-深克隆/" data-id="cje98r9nf003la09fgd536wro" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/02/15/js-深克隆/" data-id="cje98tek0003db49fgv7yagk9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -1534,7 +1534,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/02/09/nodejs-生成md5/" data-id="cje98r9nn0048a09fk3mkjwbs" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/02/09/nodejs-生成md5/" data-id="cje98tekg0040b49ffx4erla3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
@@ -1584,7 +1584,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/01/23/前端监控/" data-id="cje98r9p00078a09ffcm3lmqv" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/01/23/前端监控/" data-id="cje98telq006wb49fq2v1t3i8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端上报错误信息/">前端上报错误信息</a></li></ul>
@@ -1636,7 +1636,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/01/19/web-安全/" data-id="cje98r9o20056a09fvryrj1g7" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/01/19/web-安全/" data-id="cje98tekv0050b49fk0ji345a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/安全/">安全</a></li></ul>
@@ -1685,7 +1685,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/01/09/android颜色管理/" data-id="cje98r9mp0024a09fk4h5sm6t" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/01/09/android颜色管理/" data-id="cje98tej0001zb49fpf7o801w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/color/">color</a></li></ul>
@@ -1738,7 +1738,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2017/01/06/hello-world/" data-id="cje98r9n70033a09fal52y6ho" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2017/01/06/hello-world/" data-id="cje98tejr0030b49fihj3d0m1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1785,7 +1785,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/12/22/nodejs-获取本机ip地址/" data-id="cje98r9np004ca09fxa27ajvh" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/12/22/nodejs-获取本机ip地址/" data-id="cje98tekj0045b49fi7fmsfd5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
@@ -1876,7 +1876,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/11/28/前端开发需要注意的一些问题/" data-id="cje98r9ox0071a09f77rbd2ig" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/11/28/前端开发需要注意的一些问题/" data-id="cje98telp006sb49fjvcwrxy5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1930,7 +1930,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/11/22/1px边框实现/" data-id="cje98r9la0000a09fflw94f4g" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/11/22/1px边框实现/" data-id="cje98teh90000b49fxtcb1ys5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
@@ -1979,7 +1979,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/11/17/js滚动动画/" data-id="cje98r9nj003wa09fby3nnf89" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/11/17/js滚动动画/" data-id="cje98tek6003pb49fxx3o3x54" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -2030,7 +2030,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/11/02/金钱格式化/" data-id="cje98r9pi008ia09fdhx2t810" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/11/02/金钱格式化/" data-id="cje98tema0086b49fzejhns7a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -2087,7 +2087,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/10/09/js判断对象是否为空/" data-id="cje98r9ng003oa09ffbc0j8l1" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/10/09/js判断对象是否为空/" data-id="cje98tek2003hb49fgbegu7i2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -2146,7 +2146,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/09/23/Karma-使用/" data-id="cje98r9m90013a09f80lnrgjn" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/09/23/Karma-使用/" data-id="cje98teie000yb49f7dcpxmaq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
@@ -2197,7 +2197,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/09/20/JS-正则表达式/" data-id="cje98r9lv000ca09f7d1or5g4" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/09/20/JS-正则表达式/" data-id="cje98tei1000bb49fu051c7iw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -2247,7 +2247,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/09/18/React-PropTypes/" data-id="cje98r9mg001ha09frjz0jnan" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/09/18/React-PropTypes/" data-id="cje98teim001eb49frray2vbz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
@@ -2299,7 +2299,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/09/05/基于rem的html-font-size-写法/" data-id="cje98r9p3007ha09fr7wgvdsz" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/09/05/基于rem的html-font-size-写法/" data-id="cje98telt0071b49fg1zuo4bd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
@@ -2355,7 +2355,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/09/05/js一些工具方法/" data-id="cje98r9nm0044a09fyb5mvbgs" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/09/05/js一些工具方法/" data-id="cje98tekd003xb49fu07mldbz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -2409,7 +2409,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/09/01/自定义webpack-loader简化react-router按需加载写法/" data-id="cje98r9pd0086a09fy9mgd05u" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/09/01/自定义webpack-loader简化react-router按需加载写法/" data-id="cje98tem6007xb49fjc2jsav7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
@@ -2460,7 +2460,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/08/24/es6-Mixin模式的实现/" data-id="cje98r9my002na09ft96qyxlj" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/08/24/es6-Mixin模式的实现/" data-id="cje98tejf002kb49f14kulkdz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -2525,7 +2525,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/08/24/ubuntu开发环境搭建/" data-id="cje98r9nv004ra09ffvlgeh5h" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/08/24/ubuntu开发环境搭建/" data-id="cje98tekt004wb49f45jhd861" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/环境搭建/">环境搭建</a></li></ul>
@@ -2581,7 +2581,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/08/16/微信夸号支付问题/" data-id="cje98r9p5007la09fbdcnrhhh" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/08/16/微信夸号支付问题/" data-id="cje98telw0078b49f9a2jxtti" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信/">微信</a></li></ul>
@@ -2633,7 +2633,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/08/05/关于React-ref的使用/" data-id="cje98r9oi005xa09ftpsorv44" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/08/05/关于React-ref的使用/" data-id="cje98tel9005mb49fwnjpr5bh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
@@ -2732,7 +2732,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/07/27/android-APP常用图标尺寸规范/" data-id="cje98r9mm001wa09ffgihz0jn" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/07/27/android-APP常用图标尺寸规范/" data-id="cje98teiy001vb49fa6huyal9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/规范/">规范</a></li></ul>
@@ -2796,7 +2796,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/07/25/关于vue中自定义事件的理解/" data-id="cje98r9ol0065a09f024e588n" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/07/25/关于vue中自定义事件的理解/" data-id="cje98telb005ub49ff797q7df" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
@@ -2843,7 +2843,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/07/13/React-Native-StyleSheet-封装/" data-id="cje98r9me001fa09ffh09irmx" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/07/13/React-Native-StyleSheet-封装/" data-id="cje98teik001ab49f8stanqz0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2892,7 +2892,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/06/30/git-提交信息规范/" data-id="cje98r9n2002va09ftxvs6fwn" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/06/30/git-提交信息规范/" data-id="cje98tejk002sb49fq15pqfw0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -2942,7 +2942,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/06/29/js构造树状数据结构/" data-id="cje98r9nh003sa09fqxlmw92k" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/06/29/js构造树状数据结构/" data-id="cje98tek4003lb49flszxr2ii" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -2991,7 +2991,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/06/29/获取滚动条宽度/" data-id="cje98r9pf008ba09fbhtbbbxt" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/06/29/获取滚动条宽度/" data-id="cje98tem70080b49ftzaocszl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -3049,7 +3049,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/06/29/HTML5本地存储/" data-id="cje98r9lk0004a09f7mjg0avh" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/06/29/HTML5本地存储/" data-id="cje98teht0006b49fs8zjnbe2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -3115,7 +3115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/06/29/关于但页面应用的url处理/" data-id="cje98r9om0069a09frp43r239" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/06/29/关于但页面应用的url处理/" data-id="cje98tele0062b49f4b3gvg23" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/单页面/">单页面</a></li></ul>
@@ -3168,7 +3168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/06/21/shell命令符号-；-作用/" data-id="cje98r9ns004ka09ffhwnaosr" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/06/21/shell命令符号-；-作用/" data-id="cje98tekp004lb49fb04vakso" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongodb/">mongodb</a></li></ul>
@@ -3218,7 +3218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/06/14/常用css代码片段/" data-id="cje98r9p2007fa09f73rk7brp" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/06/14/常用css代码片段/" data-id="cje98telv0075b49fewi4tvwk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
@@ -3295,7 +3295,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/06/12/简单按钮实现/" data-id="cje98r9pa007za09f015q51ir" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/06/12/简单按钮实现/" data-id="cje98tem1007mb49fre8z3ffd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/按钮/">按钮</a></li></ul>
@@ -3439,7 +3439,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/05/31/Git使用/" data-id="cje98r9lq0006a09fu2uak2ga" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/05/31/Git使用/" data-id="cje98tehp0005b49f1shzulqo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -3491,7 +3491,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/05/31/web弹框插件设计/" data-id="cje98r9ok0061a09f37vcwhbi" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/05/31/web弹框插件设计/" data-id="cje98tela005qb49f0ahizpx9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/弹框/">弹框</a></li></ul>
@@ -3543,7 +3543,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/05/29/使用IntelliJ系列IDE，导致webpack-dev-server监听文件失效问题/" data-id="cje98r9of005oa09flxsq1n11" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/05/29/使用IntelliJ系列IDE，导致webpack-dev-server监听文件失效问题/" data-id="cje98tel6005fb49f0uuk1zmt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
@@ -3655,7 +3655,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/05/27/React-周期函数/" data-id="cje98r9mj001pa09fwye6syyd" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/05/27/React-周期函数/" data-id="cje98teiq001lb49f2ppg7jmv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
@@ -3725,7 +3725,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/05/22/node-项目中的模块/" data-id="cje98r9nk0040a09fu121rc2r" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/05/22/node-项目中的模块/" data-id="cje98teka003tb49fd0iepj8f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
@@ -3790,7 +3790,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/05/19/MongoDB-从懵逼到入门/" data-id="cje98r9mc001ba09f1sfbloui" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/05/19/MongoDB-从懵逼到入门/" data-id="cje98teif0012b49fuxgf3d9q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongodb/">mongodb</a></li></ul>
@@ -3848,7 +3848,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/05/17/使用序列生成id/" data-id="cje98r9oh005ta09fe4d0ktsd" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/05/17/使用序列生成id/" data-id="cje98teld005yb49fk8p5505i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li></ul>
@@ -3911,7 +3911,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/05/17/人员管理数据库设计/" data-id="cje98r9oe005la09fkrieo5pu" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/05/17/人员管理数据库设计/" data-id="cje98tel5005cb49fi4srv4gi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li></ul>
@@ -3960,7 +3960,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/05/09/利用HTML和CSS实现常见的布局/" data-id="cje98r9or006ja09fjc2jrwa6" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/05/09/利用HTML和CSS实现常见的布局/" data-id="cje98teli006bb49fj5nyvh0g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/布局/">布局</a></li></ul>
@@ -4150,7 +4150,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/04/27/CSS-Secrets阅读笔记/" data-id="cje98r9ln0005a09fwrpisov9" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/04/27/CSS-Secrets阅读笔记/" data-id="cje98tehf0001b49fykkfg9o7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
@@ -4203,7 +4203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/04/27/绝对定位方式水平垂直居中/" data-id="cje98r9pc0083a09fxy7zcw1m" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/04/27/绝对定位方式水平垂直居中/" data-id="cje98tem2007qb49ficfwtn2i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/布局/">布局</a></li></ul>
@@ -4479,7 +4479,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/04/19/js数组操作/" data-id="cje98r9nu004na09f8m3i3prh" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/04/19/js数组操作/" data-id="cje98tekm004db49febblny88" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -4531,7 +4531,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/04/15/webpack构建，js使用script标签引入/" data-id="cje98r9oc005ha09fcthyks3m" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/04/15/webpack构建，js使用script标签引入/" data-id="cje98tekz0059b49f3wxpvomo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
@@ -4583,7 +4583,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/04/14/使用node创建一个命令行工具/" data-id="cje98r9og005ra09fi95cbxd0" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/04/14/使用node创建一个命令行工具/" data-id="cje98tel7005ib49fs718lk6x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li></ul>
@@ -4648,7 +4648,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/04/13/webpack-监听html文件/" data-id="cje98r9o40059a09fcx67z50m" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/04/13/webpack-监听html文件/" data-id="cje98tekw0053b49fenwafg12" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
@@ -4702,7 +4702,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/04/05/React组件间数据传递/" data-id="cje98r9mk001ta09ffpudcsc5" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/04/05/React组件间数据传递/" data-id="cje98teiu001ob49fjs0zu2xm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
@@ -4768,7 +4768,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/04/01/React-Redux-理解/" data-id="cje98r9mh001ma09fiw5ovyc3" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/04/01/React-Redux-理解/" data-id="cje98teio001hb49fdkpg7oxm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redux/">Redux</a></li></ul>
@@ -4827,7 +4827,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/28/分页实现方法/" data-id="cje98r9op006ga09ftml9r5ri" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/28/分页实现方法/" data-id="cje98telg0065b49f0hhj06cv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分页/">分页</a></li></ul>
@@ -4974,7 +4974,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/24/前端编码规范/" data-id="cje98r9p1007aa09f1eczv16f" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/24/前端编码规范/" data-id="cje98tem4007tb49fhl7ewljg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编码规范/">编码规范</a></li></ul>
@@ -5023,7 +5023,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/21/Intellij-IDEA-Maven3-cannot-resolve-symbol/" data-id="cje98r9lt000aa09fptkp3ocx" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/21/Intellij-IDEA-Maven3-cannot-resolve-symbol/" data-id="cje98tehz000ab49fxzjgoyd9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/错误/">错误</a></li></ul>
@@ -5076,7 +5076,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/17/本地新建文件夹并提交到github上/" data-id="cje98r9p8007sa09f1mresqlb" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/17/本地新建文件夹并提交到github上/" data-id="cje98tely007fb49fqir1oak2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li></ul>
@@ -5131,7 +5131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/17/npm-scripts-跨平台写法/" data-id="cje98r9nr004fa09fnk54wqn3" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/17/npm-scripts-跨平台写法/" data-id="cje98tekl0048b49fdgmr32oj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
@@ -5191,7 +5191,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/17/React-ES6写法/" data-id="cje98r9ma0017a09f9eztrtye" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/17/React-ES6写法/" data-id="cje98teih0016b49f3oxd4jzb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
@@ -5241,7 +5241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/15/前端工程化构建/" data-id="cje98r9ow006xa09f5srf7241" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/15/前端工程化构建/" data-id="cje98telm006lb49f8djukkug" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
@@ -5301,7 +5301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/14/模块模式/" data-id="cje98r9p9007va09f9qcdccpk" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/14/模块模式/" data-id="cje98tem0007jb49fa8hx576h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -5354,7 +5354,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/14/JS函数节流/" data-id="cje98r9lx000fa09f8es0tofy" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/14/JS函数节流/" data-id="cje98tei3000fb49f4zws3l59" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
@@ -5439,7 +5439,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/11/emmet语法/" data-id="cje98r9na003ba09fr7c8y4z8" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/11/emmet语法/" data-id="cje98tejd002gb49fevag81er" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/emmet/">emmet</a></li></ul>
@@ -5764,7 +5764,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/11/css选择器/" data-id="cje98r9mw002ja09fcf8cb50g" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/11/css选择器/" data-id="cje98tejb002cb49ff1dk30dd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
@@ -5816,7 +5816,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/10/github提交代码时，即使添加了sshkey仍然需要输入密码的原因/" data-id="cje98r9n5002za09flywqu25f" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/10/github提交代码时，即使添加了sshkey仍然需要输入密码的原因/" data-id="cje98tejm002wb49ffx1kbc5u" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh-key/">ssh-key</a></li></ul>
@@ -5874,7 +5874,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/10/webpack文件名/" data-id="cje98r9o5005da09fvdieuzab" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/10/webpack文件名/" data-id="cje98tekx0056b49f6eufl4vx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
@@ -5923,7 +5923,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/09/state-machine/" data-id="cje98r9o10053a09fp56dnh0y" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/09/state-machine/" data-id="cje98teks004sb49foab9y989" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/state-machine/">state-machine</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tabs/">tabs</a></li></ul>
@@ -6016,7 +6016,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/09/html-meta-viewport/" data-id="cje98r9nc003fa09f2rmfhibp" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/09/html-meta-viewport/" data-id="cje98tejw0038b49fwk4l05t2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/meta/">meta</a></li></ul>
@@ -6066,7 +6066,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/09/html-meta/" data-id="cje98r9nd003ia09fe4hatlem" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/09/html-meta/" data-id="cje98tejz003ab49f8wxy9k4g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/meta/">meta</a></li></ul>
@@ -6142,7 +6142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/09/html-doctype/" data-id="cje98r9n80037a09fhd496qoa" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/09/html-doctype/" data-id="cje98teju0033b49fgolka8j8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/doctype/">doctype</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
@@ -6203,7 +6203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/09/build-blog-with-hexo/" data-id="cje98r9mt002ca09f6ma701us" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/09/build-blog-with-hexo/" data-id="cje98tej40026b49f38idmcj6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -6268,7 +6268,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zkboys.com/2016/03/09/some-docs/" data-id="cje98r9nz004za09fimslornf" class="article-share-link">Share</a>
+      <a data-url="http://zkboys.com/2016/03/09/some-docs/" data-id="cje98tekr004ob49f38c15efg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docs/">docs</a></li></ul>
@@ -6298,23 +6298,23 @@
       <ul class="recent-post">
         
           <li>
-            <a href="/2018/08/09/前端与产品约定/">前端与产品约定</a>
-          </li>
-        
-          <li>
-            <a href="/2018/06/02/关于组件化/">关于组件化</a>
-          </li>
-        
-          <li>
-            <a href="/2018/05/22/前端leader工作任务/">前端leader工作任务</a>
-          </li>
-        
-          <li>
             <a href="/2018/02/27/cross-env/">cross-env</a>
           </li>
         
           <li>
+            <a href="/2017/08/09/前端与产品约定/">前端与产品约定</a>
+          </li>
+        
+          <li>
             <a href="/2017/07/28/nginx操作/">nginx操作</a>
+          </li>
+        
+          <li>
+            <a href="/2017/06/02/关于组件化/">关于组件化</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/22/前端leader工作任务/">前端leader工作任务</a>
           </li>
         
           <li>
@@ -6375,7 +6375,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">19</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">一月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">八月 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">19</span></li></ul>
     </div>
   </div>
 
